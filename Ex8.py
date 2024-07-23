@@ -39,16 +39,17 @@ second(celsius)
 
 
 # Q4]
-# n = 5
+def forth(n):
+    if n == 0:
+        return 0
+    else:
+        sum = n + forth(n - 1)
+        return sum
 
-# def forth(n):
-#     if n == 0:
-#         return 0
-#     else:
-#         return print("The sum of the first", n," natural numbers is:", n + forth(n-1))
+n = int(input("Enter the no u want to till sum it :"))
+result = forth(n)
+print(f"The sum of first {n} natural no is {result}")
 
-
-# forth(n)
 
 
 
@@ -88,11 +89,6 @@ seventh(sent2)
 
 
 
-
-
-
-
-    
 #Q8]
 
 m = int(input("Enter the no of multi table :"))
