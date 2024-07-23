@@ -30,12 +30,12 @@ second(celsius)
 
 # #Q3]
 
-sent = input("Enter the sentence :")
+# sent = input("Enter the sentence :")
 
-def third(sent):
-    print(sent,end=" ")
+# def third(sent):
+#     print(sent,end=" ")
     
-third(sent)    
+# third(sent)    
 
 
 # Q4]
@@ -75,11 +75,16 @@ sixth(inches)
     
 #Q7]
 
+sent2 = "     Hi hello ,Sasuke here         "
+print(sent2)
 
+word = input("Enter the word u want to strip from above sent:")
 
+def seventh(sent2):
+   a = sent2.replace(word,"")
+   return print(a.strip())
 
-
-
+seventh(sent2)
 
 
 
