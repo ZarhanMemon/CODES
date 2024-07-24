@@ -52,8 +52,9 @@
  
 #     break                                     # remove break if u want all tables
 # print("Done Q3")   
+  
          
-#Q4]
+# # Q4]
 
 # with open("donkey1.txt","r") as f:
 #    f1 =  str(f.read())
@@ -66,7 +67,7 @@
 # print("Done Q4")    
 
 
-#Q5]
+# #Q5]
 
 # words = ["Donkey", "stupid","jerk"]
 
@@ -82,7 +83,7 @@
 # print("Done Q5") 
 
 
-#Q6]
+# #Q6]
 
 # with open("log.txt") as m:
 #    m1 = m.read().lower()          # .lower() convert all string in file to lowercase letter
@@ -96,9 +97,55 @@
 #     print(None)   
 
 
-#Q7]
+# #Q8]
 
 # with open("this.txt") as n:
 #   n1 = n.read()
 #   with open("copythis.txt","w") as n:
-#     n.write(str(n1))
+#     n.write(n1)
+
+
+# # #Q9]
+
+# file1 = input("Enter file 1 :")
+# file2 = input("Enter file 2 :")
+
+# with open(file1,"r") as n:
+#   n1 = n.read()
+#   with open(file2,"r") as n:
+#    n2 =  n.read()
+   
+#   if n1 == n2 :
+#       print("Yes it 100% matched") 
+#   else:
+#       print("Its totally different file")
+
+
+# #Q10]
+
+# with open("wipe.txt","r") as o :
+#     o1 = str(o.read())
+    
+#     o1 = o1.replace(o1,"")
+# with open("wipe.txt","w") as o:
+#     o.write(o1)
+    
+# # with open("wipe.txt","w") as o:       # 2sd method of Q10
+# #     o.write("")    
+       
+# print("Done Q10") 
+
+
+#Q11]
+import os
+
+file3 = input("Enter the file u want to rename :")
+
+with open(file3) as l:
+   l1 =  str(l.read())
+ 
+for i in range(1,):  
+ with open(f"rename_by_python.txt{i}","w") as l:
+    l.write(l1)
+              
+os.remove(file3)
