@@ -111,4 +111,4 @@ G="duhduh"
 print(H.replace("H" , "G"))  #NOT WORK FOR WHOLE STRING
 
 
- #
+
