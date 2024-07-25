@@ -7,10 +7,10 @@ def game(player,comp):
     elif ( player =="r" or player =="rock") and comp=="paper":
         print("\nComputer has WON!")
     elif ( player =="r" or player =="rock") and comp=="scisor":
-        print("\nPlayer has WON!")
+        print(f"\n{ply} has WON!")
       
     elif ( player =="p" or player =="paper") and comp=="rock":
-        print("\nPlayer has WON!")
+        print(f"\n{ply} has WON!")
     elif  ( player =="p" or player =="paper") and comp=="paper":
         print("\nThe match is a tie !")
     elif ( player =="p" or player =="paper") and comp=="scisor":
@@ -19,7 +19,7 @@ def game(player,comp):
     elif  ( player =="s" or player =="scisor") and comp=="rock":
         print("\nComputer has WON!")
     elif  ( player =="s" or player =="scisor") and comp=="paper":
-        print("\nPlayer has WON!")
+        print(f"\n{ply} has WON!")
     elif  ( player =="s" or player =="scisor") and comp=="scisor":
         print("\nThe match is a tie !") 
         
@@ -38,10 +38,12 @@ while 0==0:
 
   print("\n       ====GAME====  ")
   
-  print("\nComp Enter : Rock , Paper or Scisor ?")
-  player = input("Player Enter : Rock(r), Paper(p) or Scisor(s) :")
+  ply = input("\nEnter yur name? :")
   
-  print(f"\nPlayer turn :{player.capitalize()}")
+  print("\nComp Enter's : Rock , Paper or Scisor ?")
+  player = input(f"{ply} Enter : Rock(r), Paper(p) or Scisor(s) :")
+  
+  print(f"\n{ply} turn :{player.capitalize()}")
   print(f"Comp turn :{comp.capitalize()}")
   
 
@@ -50,9 +52,9 @@ while 0==0:
 
 # this by chatgpt -- because i want it to repeat or quit the game
 
-  play_again= input("\nDo you want to play again? (yes/no):").strip().lower()  #strip is used to cut the space and lower to print next to line
+  play_again= input("\nDo you want to play again? (y/n):").strip().lower()  #strip is used to cut the space and lower to print next to line
 
-  if play_again == "no":
+  if play_again == "n":
     break  
 
 print("Thanks for playing!")
