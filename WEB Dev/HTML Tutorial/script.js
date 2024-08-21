@@ -1,0 +1,1 @@
+alert("AOT is Best")
