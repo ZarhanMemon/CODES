@@ -1,3 +1,6 @@
 body{background-color: mediumaquamarine;
 color: brown;}
 h1{color: blueviolet}
+th{color: blue;}
+td{border: 2px solid black; color: orangered;}
+caption{color:crimson}

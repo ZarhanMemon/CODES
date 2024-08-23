@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="link_style.css">
 </head>
 <body>
-   
+
+
+ <!-- 1] -->
   <!-- Heading tag -->
     <h1>My Bookmark - using h1</h1>
     <h2 style="color: chocolate;">My Bookmark - using h2</h2>
@@ -19,13 +21,109 @@
     <h5 style="color: greenyellow;">My Bookmark - using h5</h5>
     <h6 style="color: green;">My Bookmark - using h6</h6>
 
+
+ <!-- 2] -->
     <!--Paragraph tag -->
      <p style="color: purple; background-color: rosybrown;">
         Hello hi how are you good morning - using P tag
     </p>
 
-    <!-- Anchor tag -->
-     <a target="_blank" href="https://www.youtube.com">Open Youtube - using anchor tag</a>
+
+ <!-- 3] -->
+    <!-- Anchor tag - target="_blank" -> link opens in new tab 
+                    - href="https//link.com" -> src hai ye
+ -->
+     <a target="_blank" href="https://www.youtube.com">Open Youtube - using anchor tag</a><br><br>
+
+
+ <!-- 4] -->
+     <!-- Image tag -->
+      <img width="" height="32" src="vegita_red&blue.png" alt="vegita - using img tag"><br><br>
+
+
+<!-- 5] -->
+     <!-- Table tag - colspan="" -> merges no of columns in one col
+                    - rowspan="" -> merges no of rows in one row
+                     -->
+<table>
+    <caption>Dragon Ball</caption>
+
+    <thead>
+      thead - used for grouping ;
+    </thead>
+
+  <br><br>
+
+      <tr> 
+          <th colspan="" rowspan="" >Sayains</th>     
+          <th>Power_lev</th>
+          <th>Form</th>
+      </tr>
+     
+    <tbody>
+      <tr>
+          <td colspan="" rowspan="" >Goku</td>
+          <td rowspan="3"> Infinite</td>
+          <td>MUI</td>
+      </tr>
+
+      <tr>
+        <td>Vegita</td>
+        <td>UE</td>
+      </tr>
+
+      <tr>
+        <td>Gohan</td>
+        <td>Beast</td>
+      </tr>
+  </tbody> 
+
+  <tfoot>
+      tfoot - use for grouping
+  </tfoot>
+
+</table>
+
+
+<!-- 6] -->
+
+  <!-- LIST - Order list
+            - Unorder list
+            - Defination list
+-->
+    <ol type="1" start="1" >  <!-- -type="A,a,i,I" 
+                                   -start="any" 
+                                   -reversed    -->
+                                   
+      <h3 style="color: forestgreen;">Order List - using ul</h3>
+      <li>Trunks</li>
+      <li>Picolo</li>
+      <li>Gogeta</li>
+    </ol>
+
+
+    <ul type="disc" >   <!--type="circle,square"-->
+
+      <h3 style="color: red;">Unorder List - using ul,li</h3>
+       <li>Trunks</li>
+       <li>Picolo</li>
+       <li>Gogeta</li>
+    </ul> 
+
+
+    <dl>
+      <h3 style="color: crimson;">Defination List - using dlist,dterm,ddef</h3>
+        
+        <dt>Defination term</dt>
+          <dd>Defination defination</dd>
+        <dt>Bleach</dt>
+          <dd>underrated anime</dd>
+        <dt>One piece</dt>
+          <dd>long lastic</dd>
+    </dl>
+
+
+
 
     <script src="script.js"></script>
 </body>
