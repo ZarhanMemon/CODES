@@ -125,6 +125,11 @@ else:
 
 #3] PASS
   
+for i in range(0,10):
+    if i==2:
+        pass
+    else:
+        print("Done") 
 
       
   
