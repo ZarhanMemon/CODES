@@ -30,12 +30,13 @@ second(celsius)
 
 # #Q3]
 
-# sent = input("Enter the sentence :")
+sent = input("Enter the sentence :")
 
-# def third(sent):
-#     print(sent,end=" ")
+def third(sent):
+    print(sent,end=" ")
+    print("")
     
-# third(sent)    
+third(sent)    
 
 
 # Q4]
@@ -53,7 +54,7 @@ print(f"The sum of first {n} natural no is {result}")
 
 
 
-#Q5]
+#Q5] IMP
 
 n=3
 
