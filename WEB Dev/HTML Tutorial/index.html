@@ -39,6 +39,7 @@
  <!-- 4] -->
      <!-- Image tag -->
       <img width="" height="32" src="vegita_red&blue.png" alt="vegita - using img tag"><br><br>
+      
 
 
 <!-- 5] -->
@@ -84,6 +85,7 @@
 
 </table>
 
+----------------------------------------------------------------------
 
 <!-- 6] -->
 
@@ -95,7 +97,7 @@
                                    -start="any" 
                                    -reversed    -->
                                    
-      <h3 style="color: forestgreen;">Order List - using ul</h3>
+      <h3 style="color: forestgreen;">Order List - using ol</h3>
       <li>Trunks</li>
       <li>Picolo</li>
       <li>Gogeta</li>
@@ -122,8 +124,71 @@
           <dd>long lastic</dd>
     </dl>
 
+----------------------------------------------------------------------
+
+<!--7] -->
+  
+ <!-- FORM & INPUT -->
+
+  <h1>Form</h1>
+
+    <form  method="post" action="" name="FORM">             <!--or method="get" ; action="use to send to server" ; name="just a name"-->
+     
+    <div>                                         <!--div tag used to seperate a line or skip line-->
+      <!-- Label tag -->
+        <lab>Username:</lab>
+
+      <!--Input tags -->
+        <input type="text" pattern="" autofocus id="u1" name="username" placeholder="Enter your Username">
+    </div>
 
 
+<!-- Note - if we put for ="[id in radio]" in label(use fullname) then label & radio merges  -->
+ <div>
+   <input type="radio" id="m_us1" name="gender" value="m">  <label for="m_us1">Male</label>       <!--if we not add name="gender" in both then we cant be able to select 1 ata time-->
+   <input type="radio" id="f_us1" name="gender" value="f">  <label for="f_us1">Fe-male</label>      
+ </div>
+
+
+ <div>
+  <input type="password" id="pw_u1 "name="password" placeholder="Enter password" >
+ </div>
+
+
+ <div>
+  <input type="checkbox" id="cb1_u1"> 
+   <label for="cb1_u1">Naruto</label>            <!--use <label> full to merge-->
+<br>
+  <input type="checkbox" id="cb2_u1"> 
+   <label for="cb2_u1">One piece</label>  
+ </div>
+
+
+ <div>
+    <label for="txa_u1">Enter comment here..</label><br>
+     <textarea id="txa_u1" value="textarea" name="text_area" rows="4" cols="8">
+      suii
+     </textarea>
+ </div>
+
+
+ <div>
+  <select name="Anime">
+      <option value="Naruto"> Naruto</option>
+      <option value="One piece"> One piece</option>
+      <option value="Bleach"> Bleach</option>
+  </select>
+ </div>
+
+
+
+
+
+
+
+
+    </form>
+    
 
     <script src="script.js"></script>
 </body>
