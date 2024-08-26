@@ -28,6 +28,7 @@ print(object.hero,object.aura_level,object.Date)       # type: ignore
 #---------------------------------------------------------------
 
 # SELF method --> used in function like below
+              #  --> u can put anything replace of self ex_ at end of self
 
 
 class Anime:
@@ -42,6 +43,15 @@ minato = Anime()                     # self = minato,etc in this case
 minato.hero = "Uzumaki Minato"       # here i change class atr(naruto) to obj atr(minato)
 
 minato.naruto()           #or Anime.naruto(minato)
+
+# NOTE-
+#Self replacement - 
+class Footballer:
+  def __init__(slf,name):      # type: ignore #here --> self = slf,etc
+    slf.name = name       #here --> self.name = slf.name
+    print(slf.name)     
+zarhan = Footballer("Ronaldo")
+ 
 
 #NOTE:- Object atr >>> Class atr bcz of object atr uniquiness info to identify perticular object also during assingment & retrival
 
@@ -59,6 +69,7 @@ class Bleach:
 aizen = Bleach()
 aizen.greet_with_self()  #--> self works
 aizen.greet_no_self()    #--> no self with static method works
+
 
 
 #   __INIT__ METHOD --> - also called Constructor method
