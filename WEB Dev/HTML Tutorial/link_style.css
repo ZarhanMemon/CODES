@@ -6,3 +6,11 @@ td{border: 2px solid black; color: orangered;}
 caption{color:crimson}
 a{background-color: rgb(231, 93, 93);color: rgb(224, 224, 94);}
 p{background-color: bisque;}
+
+/* U can use id by [#] */
+#a1{background-color: blueviolet;color: black;}
+#a2{ color: white}
+
+/* U can use id by [.] */
+.a1{background-color: blueviolet;}
+.a2{ color: white;color:black}

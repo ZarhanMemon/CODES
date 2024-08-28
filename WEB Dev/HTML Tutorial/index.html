@@ -202,7 +202,7 @@ Inline Elements
 
 
 
-<h2>BLOCK :-</h2><!-- - are the element which takes whole extra line with its required spaces  -->
+<h2>BLOCK :-</h2>   <!-- - are the element which takes whole extra line with its required spaces  -->
 
    <p>Para tag is ex of Block elm - see whole line is taken by it not like above tag</p> see this text print on next line of p-tag
 <!-- SOME Eg are-
@@ -221,12 +221,92 @@ Block Elements ->
 <article>: Represents an independent piece of content
 -->
 
+<div>-----------------------------------------------------------</div>
+
+
+<h1>ID & Class</h1>
+
+<h2 style="color: red;">ID</h2>
+<!-- - is a uniqui for every one like= adhaar card no
+     - u can aply on one id at a time eg- id = "123" -->
+
+  <div id="a1">hello1 with id="a1"</div>
+  <div id="a2">hello2 with id="a2"</div>
+  <span id="aa3"></span>
+
+  <!-- NOTE - U can use id by [#] 
+             #a1{background-color: blueviolet;color: black;} 
+             #a2{background-color: yellow; color: white}-->
+
+
+<h2 style="color: red;">Class</h2>
+  <!-- - class is a group in more than a1 can have same class
+       - we can add 2/3 class in same tag eg- class = "a1 a2" where a1a&2 are diff classes   -->
+
+ <p class="a1 a2">hello3 with class="a1 a2"</p>
+ <div class="a2">hello4 with class="a1</div>
+
+    <!-- NOTE - U can use id by [.] 
+             #a1{background-color: blueviolet;color: black;} 
+             #a2{background-color: yellow; color: white}-->
 
 
 
-    </form>
+<div>-----------------------------------------------------------------</div>     
+
+<h1> Video & Audio tag</h1>
+
+<h2>Video-</h2>
+ <!-- - src = source of video , hiegth & width
+                    - controls 
+                    - autoplay
+                    - loop 
+                    - poster = thumbnail
+                    - muted                -->
+
+<video src="Goku_Rap.mp4" muted loop controls poster="Goku MUI wp.png" height="255" ></video>
+
+
+
+<h2>Audio-</h2>
+ <!--               - src = source of video
+                    - muted 
+                    - controls 
+                    - autoplay
+                    - loop 
+               IMP  - preload -> preload="auto": Loads the audio file as soon as the page loads, so it's ready to play immediately.
+                                 preload="metadata": Loads only information about the audio (like its length), but not the actual audio content.
+                                 preload="none": Doesn't load the audio file until the user clicks play
+-->
+<audio src="Goku Rap .mp3" preload="metadata" loop controls></audio>
     
+<DIV>---------------------------------------------</DIV>
 
+<h1>Iframe tag </h1>
+<!-- - use to joining other website to my website -->
+
+ <iframe width="455" height="255" src="http://192.168.1.42:3000/WEB Dev/HTML Tutorial/index.html"></iframe>
+
+<h4>other eg from yt -</h4>
+<iframe width="560" height="315"
+ src="https://www.youtube.com/embed/XZwBNDGuWGU?si=weo4RPZTWYTPEqD5&amp;start=762" 
+ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
     <script src="script.js"></script>
 </body>
 </html>
