@@ -18,7 +18,7 @@ print(object.hero,object.aura_level,object.Date)       # type: ignore
   #  Abstraction is like driving a car. You don’t need to understand the intricate details of how the engine works; you only need to know how to use the steering wheel, gas pedal, and brakes to drive.same for the function of codes dont need to know for user.
 
 #2] Encapsulation:-
- #  Encapsulation is like putting your valuables in a safe.     You keep your items secure inside the safe and only use the    combination to access them when needed. assume remote as class & button as method,variables.
+ #  Encapsulation is like putting your valuables in a safe.     You keep your items secure inside the safe and only use the combination to access them when needed. assume remote as class & button as method,variables.
 
 #3] Inheritance
 #4] Polymorphisms
