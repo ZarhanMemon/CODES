@@ -9,32 +9,154 @@
 
 <style>
 
-  #p1,div{color: aqua;
-           background-color:rgb(229, 4, 4) ;}                        /* p - selector & {inside - declaration}*/
+#p1,div{color: aqua;
+  background-color:rgb(229, 4, 4) ;}                        /* p - selector & {inside - declaration}*/
+
+
+/* ------------------------------------------------------------ */
+
+
+/* ID selector */ 
+#red{background-color: red;}
+
+/* CLASS selector */ 
+.green{background-color: green;}
+
+/* UNIVERSAL selector
+* {padding: 0;
+  margin: 0;} */
+
+/* CHILD selector */
+div > h4{background-color: yellow;}
+
+/* DESCENDENT selector */
+div h5{background-color: lime;color: black;}
+
+/* Pseudo selector */
+
+a:visited{color: rgb(255, 0, 0);}        /* if u visit web earlier then it red only*/ 
+
+a:link{color: aqua;}                  /* if not visit web then it aqua only*/ 
+
+a:hover{background-color: yellow;}        /* if u hoewer on it link then it show yellow in bg*/ 
+
+a:active{color: black;}                 /* if u click on it then it bcom black */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+.box{ background-color: aqua;
+      margin: 0;
+      padding: 0;
+}
+
+.box1{color: red;
+      margin: 15px;
+      padding: 10px;
+      border: blue solid 4px;
+      height: 200px;}
+
+.box2{ color: green;
+  margin: 15px;
+      padding: 10px;
+      border: blue solid 4px;
+      height: 200px;                      /*  NOTE  : Box-sizing            */
+      box-sizing: border-box ;            /*        so if we apply this then;*/
+     }                                    /*         Total height = 200px = padding + border + container */
+                                        
+                                          /*         if not then; 200 = container        */
+
+                    
+.box3{color: black;
+      margin: 30px;                       /*between the boxes the Margin is the largest margin which has boxes . output me deko*/
+      padding: 10px;                      
+      border: blue solid 4px;
+      height: 200px;
+}
+.box4{color: black;
+      margin: 20px;
+      padding: 10px;
+      border: blue solid 4px;
+      height: 200px;
+}
+
 
 </style>
 
 </head>
 <body>
-    
-<h2>3 ways to add CSS in html</h2>
-<ol>
 
-<!-- 1] Internal Css:- used inside <head> -> <style> by using p{... }-->
-  <li>Internal Css:- </li>
+
+<h2>Types of CSS:-</h2> <br> 
+
+<!-- a] Internal Css:- used inside <head> -> <style> by using p{... }-->
+a]  Internal Css:- 
               <p id="p1">Use of Internal Css</p>
-  <!-- <div>hello multiple at one time</div>  -->
+  <!-- <div>hello multiple at one time</div>  --><br>
 
-<!-- 2] Inline Css:- used inside attribute space by using style=""-->
-  <li>Inline Css:-</li>
-              <p style="color: #10cf1c;background-color: #f3e246;;">Use of Inline Css</p>
+<!-- b] Inline Css:- used inside attribute space by using style=""-->
+b]  Inline Css:-
+              <p style="color: #10cf1c;background-color: #f3e246;;">Use of Inline Css</p><br>
 
-<!-- 3] External Css :- Use LINK tag to link another file contains css to og file  -->
-  <li>External Css:-</li>
+<!-- c] External Css :- Use LINK tag to link another file contains css to og file  -->
+c]  External Css:-
               <h4>Use of External Css</h4>
-             <link rel="stylesheet" href="css1.css" >
+             <link rel="stylesheet" href="css1.css" ><br><br>
 
 
-</ol>
+---------------------------------------------------------------------------------------------------
+
+
+<h2>Types of Selector:-</h2><br>
+
+<!--1] ID selector -->
+1] Id selector:
+  <div id="red">This is id(#) selector</div><br>
+
+<!--2] CLASS selector -->
+2] Class selector:
+  <div class="green">This is class(.) selector</div><br>
+
+<!--3] UNIVERSAL selector - it applys to all -->
+3] Universal selector:
+<div>This is universal(*) selector</div><br>
+
+<!--4] CHILD selector - works for those whos direct child it is, eg= div > h4 -->
+4] Child selector:
+<div> 
+  <h4>This is CHILD(a>b ) selector</h4>
+</div>
+
+<!--5] DESCENDENT selector - works for those whos direct OR indirectly its child it is, eg= div >p >a> h4 -->
+5] Descendent selector:
+<div>
+   <p> <h5>This is Descendent(a b) selector</h5></p>
+</div>
+
+<!--6] PSEUDO selector - it applys to all -->
+6] Pseudo selector:
+<br>
+<a href="https://www.google.com">Google</a><br>
+<a href="https://www.facebook.com">Facebook</a><br><br>
+
+
+======================================================================
+
+
+<h2>BOX Model & Sicing - Margin,Padding & Container</h2><br>
+
+<p class="box box1">I m box</p>
+<p class="box box2">I m 2nd box with box sicing</p>
+
+
+-----------------------------------------------------------------------
+
+<h2>Margin Collapse-</h2>
+
+<p class="box box3">I m box</p>
+<p class="box box4">I m box </p>
+
+
 </body>
 </html>
