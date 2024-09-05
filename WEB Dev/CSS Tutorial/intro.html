@@ -32,6 +32,7 @@ div > h4{background-color: yellow;}
 /* DESCENDENT selector */
 div h5{background-color: lime;color: black;}
 
+
 /* Pseudo selector */
 
 a:visited{color: rgb(255, 0, 0);}        /* if u visit web earlier then it red only*/ 
@@ -42,6 +43,8 @@ a:hover{background-color: yellow;}        /* if u hoewer on it link then it show
 
 a:active{color: black;}                 /* if u click on it then it bcom black */
 
+/* p:first-child{color: blue;}         - only for first no para  */
+/* p:nth-child(2){color: #f3e246;}     - only apply on 2nd no of para */
 
 /* ------------------------------------------------------------------------------------------ */
 
@@ -80,6 +83,39 @@ a:active{color: black;}                 /* if u click on it then it bcom black *
       border: blue solid 4px;
       height: 200px;
 }
+
+/* To add font from net  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#font{font-family: "Poppins", sans-serif;
+      font-style: oblique;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 20px;
+      color: rgb(255, 7, 7);;
+}
+
+#font1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 400;
+        font-variant: small-caps;
+        line-height: 1.6;
+        letter-spacing: 5px;
+        text-transform: capitalize;
+        text-decoration: overline;
+        text-decoration-color: #f3e246;
+        text-decoration-thickness: 2.5px;
+    text-indent: 238px;
+    text-align: right;
+}    
+
+
+/*#font2{ *color: red;                  -name word
+        color: #f3e246;                -key word
+        color: rgb(23, 46, 6);              -rgb
+        color: rgba(78, 6, 98, 0.7643);     -rgba
+        color: hsl(45, 66, 87);             -hsl       
+}
+*/
 
 
 </style>
@@ -158,5 +194,22 @@ c]  External Css:-
 <p class="box box4">I m box </p>
 
 
+=====================================================================
+
+
+<h3 id="font">Hello I am Good</h3>
+
+<p id="font1">suiii Good Morning</p>
+
+<h4>Way to add color</h4>
+<ol>
+<li>name word</li>
+<li>key word</li>
+<li>rgb</li>
+<li>rgba</li>
+<li>hsl </li>
+
+
+</ol>
 </body>
 </html>
