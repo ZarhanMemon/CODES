@@ -131,7 +131,7 @@ C.intro()                                  # --> uses Papajis def intro [ I am P
 
 # SUPER Method - it used to acess the main class inside child class
 # Syntx--> 
-        #    super().parent_class_function()
+        #    super().parent_class_function()  also can be used with constructor super().__init__
 #eg-
     
 class Parent_class():
@@ -164,9 +164,62 @@ b.__init__()
 # -----------------------------------------------------------
 
 
-# CLASS Method -
+# CLASS Method - it is method that connected with the class atr not with object atr
+            #  - also used to change the class atr by using a method
+            
+# SYNTX --> @classmethod
+#           def ...(cls):
 
 
+class Employee():
+     roll_no01 = 15 
+     
+     def change_rollno(self,roll_no02):
+         self.roll_no01 = roll_no02 
+         print(roll_no02)
+         
+     
+zarhan = Employee()
+
+print(zarhan.roll_no01)     #-> instance atr = 15
+
+zarhan.change_rollno(16)    # here i change inst atr to 15 --> 16 
+
+# But i want to change 
+# Employee atr = 15 --> 16 
+
+print(Employee.roll_no01)   #-> class atr = 15
+
+# ---
+
+#HERE IS CLASS Method used 
+
+
+class Employe():
+     roll_no01 = 15 
+
+# 1] @classmethod
+    
+     @classmethod
+     def change_rollno(cls,roll_no01):
+         cls.roll_no01 = roll_no01
+         print(roll_no01,"Here it change to 15-->16")
+         
+# 2] __class__ 
+
+#     def change_rollno(self,roll_no02):
+#          self.__class__roll_no01 = roll_no01    --> here easily we change class atr 
+#          print(roll_no01)
+         
+     
+zarhan = Employe()
+
+print(zarhan.roll_no01,"inst atr is 15")    #-> inst atr = 15
+
+zarhan.change_rollno(16)   #-> Employe ka class atr = 15 --> 16 
+
+print(Employe.roll_no01,"Here i use class method to change roll no parmanently to 16")   #-> class atr = 16
+ 
 
 
 

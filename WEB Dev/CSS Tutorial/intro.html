@@ -117,6 +117,41 @@ a:active{color: black;}                 /* if u click on it then it bcom black *
 }
 */
 
+/* ===================================================*/
+
+/* NOTE - style on tag is from last class selector if its in class selector grp 
+         in case given below Yellow class is applied on h2 bcz its last */
+
+
+ /* The specificity of this selector is 100  */
+#purple{color: purple;}
+
+
+ /* The specificity of this selector is 10,000  */
+.red{color: red !important;}                       /*if we use !imp then it priotirize this above all*/
+
+
+ /* The specificity of this selector is 10  */
+.blue{color: blue;}              
+
+
+ /* The specificity of this selector is 10  */
+.yellow{color: yellow;}
+
+
+/* The specificity of this selector is 1  */
+h2{color: gray;}
+span h2{color: chartreuse;}  
+
+
+/* The specificity of this selector is a-1 + harryclass-10 + rohanclass-10 + (Atr selectord)href-10 + (pseudo class)hover-10 = 41  */
+a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;}
+
+/* ==================================================================== */
+
+
+
 
 </style>
 
@@ -208,8 +243,51 @@ c]  External Css:-
 <li>rgb</li>
 <li>rgba</li>
 <li>hsl </li>
-
-
 </ol>
+
+===========================================================<br><br>
+
+<div>
+CSS Specificity - used to overlap the style on tags.<br><br>
+
+The Cascade Algorithm - decides which style will specificaly target on that tag.<br><br>
+
+
+ ##NOTE -> Priority Order :
+     -> Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector.<br><br>
+
+#Specificity Calculation:-
+To calculate specificity, assign a value to each part of the selector:
+<OL>
+<LI>Universal(*) Selector: 0</LI>
+<LI>Element selectors and pseudo-elements: 1</LI>
+<LI>Class(.) selectors, Attribute[..] selectors, and pseudo(...:{})-classes: 10</LI>
+<LI>ID(#) selectors: 100</LI>
+<LI>Inline styles: 1000</LI>
+<li>If u put [ Syntx = !important; ]:10,000+</li>
+</OL>
+</div>
+
+
+<span>
+  <h2 style="color: maroon;"id="purple" class="red yellow blue">CSS Specificity</h2>
+</span>
+
+==========================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
