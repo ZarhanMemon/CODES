@@ -216,15 +216,15 @@
 
 
     .inline {
-                                            /*convert block to inline */
-      border: 2px solid black;            /* --> syntx {display: block , inline , inline-block}*/
+      /*convert block to inline */
+      border: 2px solid black;
+      /* --> syntx {display: block , inline , inline-block}*/
       margin: 20px;
       padding: 35px;
       display: inline;
-      width: 20px;                  /* it has no effect on div1*/
+      width: 20px;
+      /* it has no effect on div1*/
       height: 30px;
-      color: aquamarine;
-
     }
 
     .inline_block {
@@ -233,7 +233,6 @@
       margin: 20px;
       padding: 35px;
       display: inline-block;
-      color: aqua;
       /*width: 20px;                    /* it has effect on div2
       height: 30px;  */
     }
@@ -250,7 +249,6 @@
       margin: 20px;
       padding: 30px;
       display: block;
-      color: burlywood;
     }
   </style>
 
@@ -290,8 +288,8 @@
   <div class="green">This is class(.) selector</div><br>
 
   <!--3] UNIVERSAL selector - it applys to all -->
-  <!-- 3] Universal selector:
-  <div id="div">This is universal(*) selector</div><br> -->
+  3] Universal selector:
+  <div id="div">This is universal(*) selector</div><br>
 
   <!--4] CHILD selector - works for those whos direct child it is, eg= div > h4 -->
   4] Child selector:
@@ -339,12 +337,12 @@
   <p id="font1">suiii Good Morning</p>
 
   <h4>Way to add color</h4>
-  <ol start="1">
-    <li>1]name word</li>
-    <li>2]key word</li>
-    <li>3]rgb</li>
-    <li>4]rgba</li>
-    <li>5]hsl </li>
+  <ol>
+    <li>name word</li>
+    <li>key word</li>
+    <li>rgb</li>
+    <li>rgba</li>
+    <li>hsl </li>
   </ol>
 
   ===========================================================<br><br>
@@ -360,14 +358,14 @@
 
     #Specificity Calculation:-
     To calculate specificity, assign a value to each part of the selector:
-    <ol>
-      <li>1.Universal(*) Selector: 0</li>
-      <li>2.Element selectors and pseudo-elements: 1</li>
-      <li>3.Class(.) selectors, Attribute[..] selectors, and pseudo(...:{})-classes: 10</li>
-      <li>4.ID(#) selectors: 100</li>
-      <li>5.Inline styles: 1000</li>
-      <li>extr:- If u put [ Syntx = !important; ]:10,000+</li>
-    </ol>
+    <OL>
+      <LI>Universal(*) Selector: 0</LI>
+      <LI>Element selectors and pseudo-elements: 1</LI>
+      <LI>Class(.) selectors, Attribute[..] selectors, and pseudo(...:{})-classes: 10</LI>
+      <LI>ID(#) selectors: 100</LI>
+      <LI>Inline styles: 1000</LI>
+      <li>If u put [ Syntx = !important; ]:10,000+</li>
+    </OL>
   </div>
 
 
