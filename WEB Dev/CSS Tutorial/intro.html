@@ -1,115 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to use CSS in html?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to use CSS in html?</title>
 
-    <!-- How to use CSS in html? -->
+  <!-- How to use CSS in html? -->
 
-<style>
+  <style>
+    #p1 {
+      color: aqua;
+      background-color: rgb(229, 4, 4);
+    }
 
-#p1,div{color: aqua;
-  background-color:rgb(229, 4, 4) ;}                        /* p - selector & {inside - declaration}*/
+    #div {
+      color: aqua;
+      background-color: rgb(229, 4, 4);
+    }
 
-
-/* ------------------------------------------------------------ */
-
-
-/* ID selector */ 
-#red{background-color: red;}
-
-/* CLASS selector */ 
-.green{background-color: green;}
-
-/* UNIVERSAL selector
-* {padding: 0;
-  margin: 0;} */
-
-/* CHILD selector */
-div > h4{background-color: yellow;}
-
-/* DESCENDENT selector */
-div h5{background-color: lime;color: black;}
+    /* ------------------------------------------------------------ */
 
 
-/* Pseudo selector */
+    /* ID selector */
+    #red {
+      background-color: red;
+    }
 
-a:visited{color: rgb(255, 0, 0);}        /* if u visit web earlier then it red only*/ 
+    /* CLASS selector */
+    .green {
+      background-color: green;
+    }
 
-a:link{color: aqua;}                  /* if not visit web then it aqua only*/ 
+    /* UNIVERSAL selector */
+    * {
+      padding: 0;
+      margin: 0;
+    }
 
-a:hover{background-color: yellow;}        /* if u hoewer on it link then it show yellow in bg*/ 
+    /* CHILD selector */
+    div>h4 {
+      background-color: yellow;
+    }
 
-a:active{color: black;}                 /* if u click on it then it bcom black */
+    /* DESCENDENT selector */
+    div h5 {
+      background-color: lime;
+      color: black;
+    }
 
-/* p:first-child{color: blue;}         - only for first no para  */
-/* p:nth-child(2){color: #f3e246;}     - only apply on 2nd no of para */
 
-/* ------------------------------------------------------------------------------------------ */
+    /* Pseudo selector */
+
+    a:visited {
+      color: rgb(255, 0, 0);
+    }
+
+    /* if u visit web earlier then it red only*/
+
+    a:link {
+      color: aqua;
+    }
+
+    /* if not visit web then it aqua only*/
+
+    a:hover {
+      background-color: yellow;
+    }
+
+    /* if u hoewer on it link then it show yellow in bg*/
+
+    a:active {
+      color: black;
+    }
+
+    /* if u click on it then it bcom black */
+
+    /* p:first-child{color: blue;}         - only for first no para  */
+    /* p:nth-child(2){color: #f3e246;}     - only apply on 2nd no of para */
+
+    /* ------------------------------------------------------------------------------------------ */
 
 
-.box{ background-color: aqua;
+    .box {
+      background-color: aqua;
       margin: 0;
       padding: 0;
-}
+    }
 
-.box1{color: red;
+    .box1 {
+      color: red;
       margin: 15px;
       padding: 10px;
       border: blue solid 4px;
-      height: 200px;}
+      height: 200px;
+    }
 
-.box2{ color: green;
-  margin: 15px;
+    .box2 {
+      color: green;
+      margin: 15px;
       padding: 10px;
       border: blue solid 4px;
-      height: 200px;                      /*  NOTE  : Box-sizing            */
-      box-sizing: border-box ;            /*        so if we apply this then;*/
-     }                                    /*         Total height = 200px = padding + border + container */
-                                        
-                                          /*         if not then; 200 = container        */
+      height: 200px;
+      box-sizing: border-box;
+    }
 
-                    
-.box3{color: black;
-      margin: 30px;                       /*between the boxes the Margin is the largest margin which has boxes . output me deko*/
-      padding: 10px;                      
+    /*  NOTE  : Box-sizing            */
+    /*        so if we apply this then;*/
+    /*         Total height = 200px = padding + border + container */
+    /*         if not then; 200 = container        */
+
+
+    .box3 {
+      color: black;
+      margin: 30px;
+      /*between the boxes the Margin is the largest margin which has boxes . output me deko*/
+      padding: 10px;
       border: blue solid 4px;
       height: 200px;
-}
-.box4{color: black;
+    }
+
+    .box4 {
+      color: black;
       margin: 20px;
       padding: 10px;
       border: blue solid 4px;
       height: 200px;
-}
+    }
 
-/* To add font from net  */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    /* To add font from net  */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-#font{font-family: "Poppins", sans-serif;
+    #font {
+      font-family: "Poppins", sans-serif;
       font-style: oblique;
       font-weight: 600;
       text-decoration: underline;
       font-size: 20px;
-      color: rgb(255, 7, 7);;
-}
+      color: rgb(255, 7, 7);
+      ;
+    }
 
-#font1{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 400;
-        font-variant: small-caps;
-        line-height: 1.6;
-        letter-spacing: 5px;
-        text-transform: capitalize;
-        text-decoration: overline;
-        text-decoration-color: #f3e246;
-        text-decoration-thickness: 2.5px;
-    text-indent: 238px;
-    text-align: right;
-}    
+    #font1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 400;
+      font-variant: small-caps;
+      line-height: 1.6;
+      letter-spacing: 5px;
+      text-transform: capitalize;
+      text-decoration: overline;
+      text-decoration-color: #f3e246;
+      text-decoration-thickness: 2.5px;
+      text-indent: 238px;
+      text-align: right;
+    }
 
 
-/*#font2{ *color: red;                  -name word
+    /*#font2{ *color: red;                  -name word
         color: #f3e246;                -key word
         color: rgb(23, 46, 6);              -rgb
         color: rgba(78, 6, 98, 0.7643);     -rgba
@@ -117,170 +164,284 @@ a:active{color: black;}                 /* if u click on it then it bcom black *
 }
 */
 
-/* ===================================================*/
+    /* ===================================================*/
 
-/* NOTE - style on tag is from last class selector if its in class selector grp 
+    /* NOTE - style on tag is from last class selector if its in class selector grp 
          in case given below Yellow class is applied on h2 bcz its last */
 
 
- /* The specificity of this selector is 100  */
-#purple{color: purple;}
+    /* The specificity of this selector is 100  */
+    #purple {
+      color: purple;
+    }
 
 
- /* The specificity of this selector is 10,000  */
-.red{color: red !important;}                       /*if we use !imp then it priotirize this above all*/
+    /* The specificity of this selector is 10,000  */
+    .red {
+      color: red !important;
+    }
+
+    /*if we use !imp then it priotirize this above all*/
 
 
- /* The specificity of this selector is 10  */
-.blue{color: blue;}              
+    /* The specificity of this selector is 10  */
+    .blue {
+      color: blue;
+    }
 
 
- /* The specificity of this selector is 10  */
-.yellow{color: yellow;}
+    /* The specificity of this selector is 10  */
+    .yellow {
+      color: yellow;
+    }
 
 
-/* The specificity of this selector is 1  */
-h2{color: gray;}
-span h2{color: chartreuse;}  
+    /* The specificity of this selector is 1  */
+    h2 {
+      color: gray;
+    }
+
+    span h2 {
+      color: chartreuse;
+    }
 
 
-/* The specificity of this selector is a-1 + harryclass-10 + rohanclass-10 + (Atr selectord)href-10 + (pseudo class)hover-10 = 41  */
-a.harryclass.rohan-class[href]:hover {
-            color: blueviolet;}
+    /* The specificity of this selector is a-1 + harryclass-10 + rohanclass-10 + (Atr selectord)href-10 + (pseudo class)hover-10 = 41  */
+    a.harryclass.rohan-class[href]:hover {
+      color: blueviolet;
+    }
 
-/* ==================================================================== */
+    /* ==================================================================== */
 
 
 
+    .inline {
+      /*convert block to inline */
+      border: 2px solid black;
+      /* --> syntx {display: block , inline , inline-block}*/
+      margin: 20px;
+      padding: 35px;
+      display: inline;
+      width: 20px;
+      /* it has no effect on div1*/
+      height: 30px;
+    }
 
-</style>
+    .inline_block {
+      /*convert block to inline-block */
+      border: 2px solid black;
+      margin: 20px;
+      padding: 35px;
+      display: inline-block;
+      /*width: 20px;                    /* it has effect on div2
+      height: 30px;  */
+    }
+
+
+
+    /* NOTE  */
+    /* Difference btw Inline vs Inline-block :- in inline we CANT axcess to hieght,widht,padding,margin but in inline-block we can*/
+
+
+    .block {
+      border: 2px solid black;
+      /*convert  inline to block  */
+      margin: 20px;
+      padding: 30px;
+      display: block;
+    }
+  </style>
 
 </head>
+
 <body>
 
 
-<h2>Types of CSS:-</h2> <br> 
+  <h2>Types of CSS:-</h2> <br>
 
-<!-- a] Internal Css:- used inside <head> -> <style> by using p{... }-->
-a]  Internal Css:- 
-              <p id="p1">Use of Internal Css</p>
+  <!-- a] Internal Css:- used inside <head> -> <style> by using p{... }-->
+  a] Internal Css:-
+  <p id="p1">Use of Internal Css</p>
   <!-- <div>hello multiple at one time</div>  --><br>
 
-<!-- b] Inline Css:- used inside attribute space by using style=""-->
-b]  Inline Css:-
-              <p style="color: #10cf1c;background-color: #f3e246;;">Use of Inline Css</p><br>
+  <!-- b] Inline Css:- used inside attribute space by using style=""-->
+  b] Inline Css:-
+  <p style="color: #10cf1c;background-color: #f3e246;;">Use of Inline Css</p><br>
 
-<!-- c] External Css :- Use LINK tag to link another file contains css to og file  -->
-c]  External Css:-
-              <h4>Use of External Css</h4>
-             <link rel="stylesheet" href="css1.css" ><br><br>
-
-
----------------------------------------------------------------------------------------------------
+  <!-- c] External Css :- Use LINK tag to link another file contains css to og file  -->
+  c] External Css:-
+  <h4>Use of External Css</h4>
+  <link rel="stylesheet" href="css1.css"><br><br>
 
 
-<h2>Types of Selector:-</h2><br>
+  ---------------------------------------------------------------------------------------------------
 
-<!--1] ID selector -->
-1] Id selector:
+
+  <h2>Types of Selector:-</h2><br>
+
+  <!--1] ID selector -->
+  1] Id selector:
   <div id="red">This is id(#) selector</div><br>
 
-<!--2] CLASS selector -->
-2] Class selector:
+  <!--2] CLASS selector -->
+  2] Class selector:
   <div class="green">This is class(.) selector</div><br>
 
-<!--3] UNIVERSAL selector - it applys to all -->
-3] Universal selector:
-<div>This is universal(*) selector</div><br>
+  <!--3] UNIVERSAL selector - it applys to all -->
+  3] Universal selector:
+  <div id="div">This is universal(*) selector</div><br>
 
-<!--4] CHILD selector - works for those whos direct child it is, eg= div > h4 -->
-4] Child selector:
-<div> 
-  <h4>This is CHILD(a>b ) selector</h4>
-</div>
+  <!--4] CHILD selector - works for those whos direct child it is, eg= div > h4 -->
+  4] Child selector:
+  <div>
+    <h4>This is CHILD(a>b ) selector</h4>
+  </div>
 
-<!--5] DESCENDENT selector - works for those whos direct OR indirectly its child it is, eg= div >p >a> h4 -->
-5] Descendent selector:
-<div>
-   <p> <h5>This is Descendent(a b) selector</h5></p>
-</div>
+  <!--5] DESCENDENT selector - works for those whos direct OR indirectly its child it is, eg= div >p >a> h4 -->
+  5] Descendent selector:
+  <div>
+    <p>
+    <h5>This is Descendent(a b) selector</h5>
+    </p>
+  </div>
 
-<!--6] PSEUDO selector - it applys to all -->
-6] Pseudo selector:
-<br>
-<a href="https://www.google.com">Google</a><br>
-<a href="https://www.facebook.com">Facebook</a><br><br>
-
-
-======================================================================
-
-
-<h2>BOX Model & Sicing - Margin,Padding & Container</h2><br>
-
-<p class="box box1">I m box</p>
-<p class="box box2">I m 2nd box with box sicing</p>
+  <!--6] PSEUDO selector - it applys to all -->
+  6] Pseudo selector:
+  <br>
+  <a href="https://www.google.com">Google</a><br>
+  <a href="https://www.facebook.com">Facebook</a><br><br>
 
 
------------------------------------------------------------------------
-
-<h2>Margin Collapse-</h2>
-
-<p class="box box3">I m box</p>
-<p class="box box4">I m box </p>
+  ======================================================================
 
 
-=====================================================================
+  <h2>BOX Model & Sicing - Margin,Padding & Container</h2><br>
+
+  <p class="box box1">I m box</p>
+  <p class="box box2">I m 2nd box with box sicing</p>
 
 
-<h3 id="font">Hello I am Good</h3>
+  -----------------------------------------------------------------------
 
-<p id="font1">suiii Good Morning</p>
+  <h2>Margin Collapse-</h2>
 
-<h4>Way to add color</h4>
-<ol>
-<li>name word</li>
-<li>key word</li>
-<li>rgb</li>
-<li>rgba</li>
-<li>hsl </li>
-</ol>
-
-===========================================================<br><br>
-
-<div>
-CSS Specificity - used to overlap the style on tags.<br><br>
-
-The Cascade Algorithm - decides which style will specificaly target on that tag.<br><br>
+  <p class="box box3">I m box</p>
+  <p class="box box4">I m box </p>
 
 
- ##NOTE -> Priority Order :
-     -> Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector.<br><br>
-
-#Specificity Calculation:-
-To calculate specificity, assign a value to each part of the selector:
-<OL>
-<LI>Universal(*) Selector: 0</LI>
-<LI>Element selectors and pseudo-elements: 1</LI>
-<LI>Class(.) selectors, Attribute[..] selectors, and pseudo(...:{})-classes: 10</LI>
-<LI>ID(#) selectors: 100</LI>
-<LI>Inline styles: 1000</LI>
-<li>If u put [ Syntx = !important; ]:10,000+</li>
-</OL>
-</div>
+  =====================================================================
 
 
-<span>
-  <h2 style="color: maroon;"id="purple" class="red yellow blue">CSS Specificity</h2>
-</span>
+  <h3 id="font">Hello I am Good</h3>
 
-==========================================================================================
+  <p id="font1">suiii Good Morning</p>
+
+  <h4>Way to add color</h4>
+  <ol>
+    <li>name word</li>
+    <li>key word</li>
+    <li>rgb</li>
+    <li>rgba</li>
+    <li>hsl </li>
+  </ol>
+
+  ===========================================================<br><br>
+
+  <div id="div">
+    CSS Specificity - used to overlap the style on tags.<br><br>
+
+    The Cascade Algorithm - decides which style will specificaly target on that tag.<br><br>
 
 
+    ##NOTE -> Priority Order :
+    -> Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector.<br><br>
+
+    #Specificity Calculation:-
+    To calculate specificity, assign a value to each part of the selector:
+    <OL>
+      <LI>Universal(*) Selector: 0</LI>
+      <LI>Element selectors and pseudo-elements: 1</LI>
+      <LI>Class(.) selectors, Attribute[..] selectors, and pseudo(...:{})-classes: 10</LI>
+      <LI>ID(#) selectors: 100</LI>
+      <LI>Inline styles: 1000</LI>
+      <li>If u put [ Syntx = !important; ]:10,000+</li>
+    </OL>
+  </div>
 
 
+  <span>
+    <h2 style="color: maroon;" id="purple" class="red yellow blue">CSS Specificity</h2>
+  </span>
+  <br>
+
+  ==========================================================================================<br><br>
 
 
+  <h2 style="color: black;">Display Property</h2>
 
+  <div class="m_p inline ">
+    I am inline div1 element
+  </div>
+
+  <div class="m_pin inline_block ">
+    I am inline div2 element
+  </div>
+
+  <span class=" m_p block ">
+    I am block span element
+  </span><br>
+
+-----------------------------------------------------------------------<br><br>
+
+
+  <!-- Display: None vs Visiblility -->
+
+  <h2 style="color: black;">Display: None vs Visiblility</h2><br>
+
+  <h3>1] Visiblility:hidden - delete the content but its occupied spaces not </h3>
+
+  <div style=" visibility: hidden; " class=" m_p inline_block ">
+    <!-- style=" visibility: hidden; -->
+    Use of Visible in display
+  </div>
+
+  <h3> 2] None - delete the content and its occupied spaces too</h3>
+
+  <div class=" m_p inline_block ">
+    <!-- style="display: none;" >> put and see-->
+    Use of None in display
+  </div><br>
+
+-----------------------------------------------------------------------<br><br>
+
+  <!-- Display: FLEX -->
+
+  <h2 style="color: black;">Display: Flex</h2><br>
+
+
+  <div style="display: flex; 
+              justify-content: center;
+        " class=" m_p inline_block ">
+
+    Use of flex in display & text in center
+  </div><br>
+
+-----------------------------------------------------------------------<br><br>
+
+  <!--Display: Inline_FLEX -->
+
+  <h2 style="color: black;">Display: Flex</h2><br>
+
+ <!-- NOTE - Inline_flex >> it additional has inline prop -->
+    
+    <div style="display: inline-flex;  
+               justify-content: center;
+    "  class=" m_p inline_block ">          <!--here the word suui print bajo of -->
+    
+      Use of inline-flex in display & text in center
+    </div>
+
+<p>suii</p>
 
 
 
@@ -290,4 +451,5 @@ To calculate specificity, assign a value to each part of the selector:
 
 
 </body>
+
 </html>
