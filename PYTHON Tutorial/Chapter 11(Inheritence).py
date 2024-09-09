@@ -168,27 +168,27 @@ b.__init__()
             #  - also used to change the class atr by using a method
             
 # SYNTX --> @classmethod
-#           def ...(cls):
+#           def ...(cls,roll_no01):
 
 
 class Employee():
      roll_no01 = 15 
      
-     def change_rollno(self,roll_no02):
-         self.roll_no01 = roll_no02 
-         print(roll_no02)
+     def change_rollno(self,roll_no01):
+         self.roll_no01 = roll_no01
+         print(roll_no01,"is class atr also changed liked obj atr not")
          
      
 zarhan = Employee()
 
-print(zarhan.roll_no01)     #-> instance atr = 15
+print(zarhan.roll_no01,"object atr here")     #-> instance atr = 15
 
 zarhan.change_rollno(16)    # here i change inst atr to 15 --> 16 
 
 # But i want to change 
 # Employee atr = 15 --> 16 
 
-print(Employee.roll_no01)   #-> class atr = 15
+print(Employee.roll_no01,"not changed")   #-> class atr = 15
 
 # ---
 
@@ -221,9 +221,70 @@ zarhan.change_rollno(16)   #-> Employe ka class atr = 15 --> 16
 print(Employe.roll_no01,"Here i use class method to change roll no parmanently to 16")   #-> class atr = 16
  
 
+# ------------------------------------------
+
+# Property Decorator/Getters Method -
+
+# -> it is used to making a atr[ which is actually function] without writing it on atr
+# -> also called Getters method
+# Syntx --> @property
+
+class Products():
+    prize = 100
+    tax = 10
+    #total_prize = 110 ;not to write here do something to manlena its here by class product
+    
+    @property
+    def total_prize(self):
+        return self.prize + self.tax
+        
+parleG = Products() 
+
+print(parleG.total_prize, " is total price")
+
+print("Prize + Tax = Tolat Prize")  
+print(parleG.prize ,"+", parleG.tax ,"=",parleG.total_prize,"\n" )  
 
 
+# -------
 
+# NOTE - IT ex of Abstract BELOW
+
+# Setters Method - its used with property decorator
+                #- used getter/property_dec method as help 
+
+# Syntx --> @total_prize.setter             ->where total_prize is a property class atr/ getter method
+#            def total_prize (self,tp1): 
+#                self._total_prize = tp1   -> use [ self._abc ] this will not show error
+#              
+                
+
+class Product():
+    prize = 100
+    tax = 10
+    # total_prize = 110
+    
+    @property
+    def total_prize(self):
+         return  self.prize + self.tax
+    
+    @total_prize.setter                               #Alternative- 
+    def total_prize(self,tp1):                          # same
+        self._total_prize = tp1                         # not to code this 
+        self.prize = self._total_prize - self.tax       # self.prize = tp1 - self.tax
+        
+        
+oreo = Product() 
+
+print(oreo.total_prize, " is total price")
+print(oreo.prize , "is price of oreo")
+print(oreo.tax,"is tax on oreo\n")
+
+oreo.total_prize = int(input("Enter the new total prize:"))
+
+print("\n",oreo.total_prize, " is new total price")
+print(oreo.prize , "is new price of oreo")
+print(oreo.tax,"is new tax on oreo\n")
 
 
 
