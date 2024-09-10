@@ -33,10 +33,10 @@
     }
 
     /* UNIVERSAL selector */
-    * {
+    /* * {
       padding: 0;
       margin: 0;
-    }
+    } */
 
     /* CHILD selector */
     div>h4 {
@@ -252,6 +252,81 @@
       display: block;
       color: burlywood;
     }
+/* ======================================================*/
+
+/* SHADOW CSS:- */
+
+
+/*BOX Shadow CSS */
+
+#shadow{box-shadow: 0.83px 0.5px 5px 1px red ;
+        border: black 2px solid;
+        padding: 23px;margin: 15px;
+        inset: 2px;
+        display: inline-block;
+      }
+
+#shadow1{box-shadow: 5px 5px 15px 1px #44d917 inset;
+        border: black 2px solid;
+        padding: 23px;margin: 15px;
+        inset: 2px;
+        display: inline-block;
+      }
+
+#text-shadow{text-shadow: 2px 4px 5px lightcoral;}
+
+#outline{border: #000 2px solid;
+        outline: 2px solid blue ;
+        outline-offset: 12px;             /*gives inc space inside it*/
+        border-radius: 5px;               /*it gives curvyness to order & border*/
+        margin: 13px;padding: 7px;}
+
+
+/*=========================================================*/
+
+/* LIST Styling:- */
+
+/* Unordered list styling */
+
+#ul1{ list-style-type: circle}
+#ul2{ list-style-type: disc}
+#ul3{ list-style-type: square}
+#ul4{ list-style-type: none}
+
+
+/* Ordered list styling */
+/* The value can be any of the following:
+
+decimal: (default) - Decimal numbers (1, 2, 3, etc.)
+decimal-leading-zero: Decimal numbers with leading zeros (01, 02, 03, etc.)
+lower-roman: lowercase Roman numbers (i, ii, iii,...)
+upper-roman: uppercase Roman numbers (I, II, III,...)
+lower-alpha: lowercase alphabetical letters (a, b, c, etc.)
+upper-alpha: uppercase alphabetical letters (A, B, C, etc.) */
+
+#ol1{ list-style-type: inherit}
+#ol2{ list-style-type: upper-alpha}
+#ol3{ list-style-type: armenian}
+#ol4{ list-style-type: decimal}
+
+
+/* List-style-position -> Marker Position */
+/* It a prop that decide the marker(bullets or num) shuld be outside or inside the content box */
+
+#ol5{list-style-position: inside; background-color: aqua;}       /*this bullet also has bg aqua*/
+#ol6{ background-color: aqua;}                                /*   not this default : outside */
+
+
+/* Custom List-Style */
+#ul5{list-style-type: "🏹";list-style-position: outside;}
+#ul6{list-style-type: "💯";list-style-position: outside;}
+#ul7{list-style-type: "🔥";list-style-position: outside;}
+
+/* #ul8{list-style-type: url(https://www.google.com/imgres?q=minecraft%20img%20download&imgurl=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F223-2238863_-img-minecraft-character-with-bow.png&imgrefurl=https%3A%2F%2Fwww.pngkey.com%2Fmaxpic%2Fu2w7e6o0i1e6q8i1%2F&docid=VnUUFldx5XPxYM&tbnid=coMrFT0cGvV_fM&vet=12ahUKEwja6ZmXqriIAxUCUGcHHbciNxoQM3oECF4QAA..i&w=1833&h=1598&hcb=2&ved=2ahUKEwja6ZmXqriIAxUCUGcHHbciNxoQM3oECF4QAA);} */
+
+
+
+
   </style>
 
 </head>
@@ -340,11 +415,11 @@
 
   <h4>Way to add color</h4>
   <ol start="1">
-    <li>1]name word</li>
-    <li>2]key word</li>
-    <li>3]rgb</li>
-    <li>4]rgba</li>
-    <li>5]hsl </li>
+    <li>name word</li>
+    <li>key word</li>
+    <li>rgb</li>
+    <li>rgba</li>
+    <li>hsl </li>
   </ol>
 
   ===========================================================<br><br>
@@ -361,11 +436,11 @@
     #Specificity Calculation:-
     To calculate specificity, assign a value to each part of the selector:
     <ol>
-      <li>1.Universal(*) Selector: 0</li>
-      <li>2.Element selectors and pseudo-elements: 1</li>
-      <li>3.Class(.) selectors, Attribute[..] selectors, and pseudo(...:{})-classes: 10</li>
-      <li>4.ID(#) selectors: 100</li>
-      <li>5.Inline styles: 1000</li>
+      <li>Universal(*) Selector: 0</li>
+      <li>Element selectors and pseudo-elements: 1</li>
+      <li>Class(.) selectors, Attribute[..] selectors, and pseudo(...:{})-classes: 10</li>
+      <li>ID(#) selectors: 100</li>
+      <li>Inline styles: 1000</li>
       <li>extr:- If u put [ Syntx = !important; ]:10,000+</li>
     </ol>
   </div>
@@ -445,6 +520,102 @@
 
 <p>suii</p>
 
+========================================================================<br><br>
+<!-- Shadow CSS: 
+
+->  {box-shadow: h-offset v-offset blur spread color inset;}
+->  {text-shadow: h-offset v-offset blur color;}
+
+-h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+-blur: The larger the value, the blurrier the shadow.
+-spread: Expands or shrinks the shadow size.
+-color: Defines the shadow color.
+-inset: Makes the shadow inner. -->
+
+<h2 style="color: blue;">Shadow Property</h2><br>
+
+<h3 style="color: blue;">1] Box Shadow </h3><br>
+
+<div id="shadow">I am box with shadow</div>
+<div id="shadow1">I am box1 with inside shadow</div><br>
+
+-------------------------------------------------------<br>
+
+<h3 style="color: rgb(242, 3, 174);">2] Text Shadow </h3>
+
+<h4 style="background-color: white;color: #000;" id="text-shadow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum.</h4>
+<p style="text-shadow: 2px 2px 4px #0bd098;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eaque?</p>
+
+-----------------------------------------------------------<br>
+
+<!-- Outlines:
+An outline is a line that is drawn around elements, outside the borders, to make the element "stand out". It's commonly used for accessibility purposes, like highlighting focused elements.
+
+The Syntax for Outlines is as follows:->  {outline: width style color offset;}
+
+-width: Sets the outline width.
+-style: Determines the style of the outline such as solid, dotted, or dashed.
+-color: Sets the outline color. -->
+
+<h3 style="color: rgb(67, 254, 5);">3] Outline </h3>
+
+<p id="outline">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eaque?</p>
+
+====================================================================<br><br>
+
+<!--LIST Styling:-  -->
+
+<!-- Unordered list styling ->  Syntx ul{list-style-type: value;}-->
+<nav>
+<ul>
+  <li id="ul2">Apple</li>
+  <li id="ul1">Banna</li>
+  <li id="ul3">Candy</li>
+  <li id="ul4">Dance</li>
+</ul>
+
+
+<!-- Ordered Lists Styling -> Syntx same as ul -->
+
+<ol>
+  <li id="ol2">Apple</li>
+  <li id="ol1">Banna</li>
+  <li id="ol3">Candy</li>
+  <li id="ol4">Dance</li>
+</ol>
+
+
+<!-- List-style-position -> Marker Position 
+/* It a prop that decide the marker(bullets or num) shuld be outside or inside the content box */ -->
+
+<ol>
+  <li id="ol5">Zarhan</li>
+  <li id="ol5">list style position : inside</li>
+</ol>
+<ol >
+  <li id="ol6">Zarhan</li>
+  <li id="ol6">list style position : outside</li>
+</ol>
+
+
+<!-- Custom List Style -->
+
+<!-- Emoji wale- -->
+<ul>
+  <li id="ul5">Naruto</li>
+  <li id="ul6">Minato</li>
+  <li id="ul7">Jiraya</li>
+</ul>
+
+<!-- Image wale -->
+<!-- <ul id="ul8"></ul>
+  <li >Naruto</li>
+  <li >Minato</li>
+  <li >Jiraya</li>
+</ul> -->
+
+</nav>
 
 
 
