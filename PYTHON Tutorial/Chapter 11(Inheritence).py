@@ -287,7 +287,131 @@ print(oreo.prize , "is new price of oreo")
 print(oreo.tax,"is new tax on oreo\n")
 
 
+# =============================================================================
 
+
+##OPERATION[+,-,x] Overloading by Dunder method(__a__):
+
+# Dunder Methods Python mein operators ko custom classes ke saath kaam karne ke liye use kiye jate hain. Ye methods operators jaise +, -, * ke behavior ko define karte hain.
+
+
+class Vector():
+    
+    def __init__(self,i,j,k):
+        self.i =i
+        self.j =j
+        self.k =k
+
+       
+    def __str__(self):
+        return f"({self.i}i,{self.j}j,{self.k}k) "    
+    
+    def __add__(self,B):
+        print(f"({self.i + B.i}i,{self.i + B.j}j,{self.k + B.k}k) \n")      #if u want the resultant vector type to be vector then use Vector with return
+    
+    def __sub__(self,B):
+        print(f"({self.i - B.i}i,{self.i - B.j}j,{self.k - B.k}k) \n")       
+
+
+x = Vector(2,4,-5)
+y = Vector(2,3,6)
+
+
+x.__add__(y)  #---> here addition betwwen x & y happens ;  method2 : Z1 = x+y 
+# method2 : 
+Z1 = x+y  
+    
+x.__sub__(y)  #---> here substraction betwwen x & y happens ; method2 : Z2 =x-y
+# method2 : 
+Z2 =x-y
+
+
+
+
+
+# ------------>>
+
+# Commonly Used Dunder Methods:-->  where (other) is the 2nd value u want to do its operation with 1st one
+
+# Addition (+)
+# Method: __add__(self, other)
+# Example: a + b
+
+# Subtraction (-)
+# Method: __sub__(self, other)
+# Example: a - b
+
+# Multiplication (*)
+# Method: __mul__(self, other)
+# Example: a * b
+
+# Division (/)
+# Method: __truediv__(self, other)
+# Example: a / b
+
+# Floor Division (//)
+# Method: __floordiv__(self, other)
+# Example: a // b
+
+# Modulo (%)
+# Method: __mod__(self, other)
+# Example: a % b
+
+# Exponentiation (**)
+# Method: __pow__(self, other)
+# Example: a ** b
+
+# Equality (==)
+# Method: __eq__(self, other)
+# Example: a == b
+
+# Inequality (!=)
+# Method: __ne__(self, other)
+# Example: a != b
+
+# Less Than (<)
+# Method: __lt__(self, other)
+# Example: a < b
+
+# Less Than or Equal To (<=)
+# Method: __le__(self, other)
+# Example: a <= b
+
+# Greater Than (>)
+# Method: __gt__(self, other)
+# Example: a > b
+
+# Greater Than or Equal To (>=)
+# Method: __ge__(self, other)
+# Example: a >= b
+
+# String Representation (str())            IMP
+# Method: __str__(self)
+# Example: str(a)
+
+# Representation (repr())                     IMP
+# Method: __repr__(self)
+# Example: repr(a)
+
+# Length (len())
+# Method: __len__(self)
+# Example: len(a)
+
+# Indexing ([])
+# Method: __getitem__(self, key)
+# Example: a[key]
+
+# Set Item ([] =)
+# Method: __setitem__(self, key, value)
+# Example: a[key] = value
+
+# Delete Item (del [])
+# Method: __delitem__(self, key)
+# Example: del a[key]
+
+# Callable Objects (())
+# Method: __call__(self, *args, **kwargs)
+# Example: a()
 
 
 
