@@ -252,23 +252,36 @@ class Vectors0:
              
           elif i == len(self.a[:-1]) :
             str1 += f"{self.a[i]}a{index}"       
-            index+=1                             
+            index+=1         
+                                
         return f"{self.n} = {str1}"                               
     
     def __add__(self,v8):
         new_a = []
-        for i in range(len(self.a)):
+        if len(self.a)==len(v8.a):
+            
+         for i in range(len(self.a)):
             new_a.append(self.a[i] + v8.a[i])
-        return (f"{Vectors0(new_a,self.n)}")
+            
+         return (f"{Vectors0(new_a,self.n)}")
+     
+        else:
+          return f"The dimension of both vector is not same!!;so we cant add"
         
     def __mul__(self,v8):
       dot_product =0
-      for i in range(len(self.a)):
+      if len(self.a)==len(v8.a):
+        
+       for i in range(len(self.a)):
            dot_product +=self.a[i] * v8.a[i]
-      return f"|V| = {dot_product}"
-
+           
+       return f"|V| = {dot_product}"
+   
+      else:
+        return f"The dimension of both vector is not same!!;so we cant multiply"
+          
     def __len__(self):
-      print( f"{len(self.a)}")
+      print( f"{len(self.a)} is the lenght of {self.n} \n")           # here is the len def
     
         
 v7 = Vectors0([1,2,3],"v7")        
@@ -280,8 +293,8 @@ print(v8)
 v8.__len__()
 
 A = v7 + v8                  
-print("\nA = v7 + v8\n",A)
+print("A = v7 + v8"+"\n"+A)
 
 B = v7 * v8                  
-print("\nB = v7 * v8\n",B)
+print("\nB = v7 * v8 "+"\n"+B)
 
