@@ -120,7 +120,7 @@ print("z3= z1 + z2",z3)
 z4= z1 * z2
 print("z4= z1 * z2",z4)
 
-
+print("===================================")
 
 # Q5] for 3-dimensional
 
@@ -151,7 +151,7 @@ print("v3=v1+v2",v3)
 v4=v1*v2
 print("v4= v1 . v2",v4)
 
-print("---------------------------")
+print("===================================")
 
 
 # Q5] for nth dimension
@@ -232,63 +232,56 @@ print("\n",a)
 print("======================================")
 
 
+
 # Q6]
 
-
-class Vectors0():
-    def __init__(self,v,name):
-        self.v = v
-        self.name = name
+class Vectors0:
+    
+    def __init__(self,a,name):
+        self.a = a
+        self.n=name
         
     def __str__(self):
-        str1=""                                   # here i take a blank string in which ican add my vector 
+        str1=""                                  
         index=0
-        for i in range(len(self.v)):            # here i write for loop to add n-dimension of vector in str so 
+        for i in range(len(self.a)):              
           
-          if i!= len(self.v[:-1]):
-            str1 += f"{self.v[i]}a{index} + "     # so i write (self.v5[i]) which mean if i=0 then add the num which contains in 0 index number for v5 it was [1] 
-           
-            index+=1 
+          if i!= len(self.a[:-1]):
+            str1 += f"{self.a[i]}a{index} + " 
+            index +=1   
              
-          elif i == len(self.v[:-1]) :
-            str1 += f"{self.v[i]}a{index}"     # i used this to neglet (+) at end
-            
-            index+=1                            #and i have witten it {index} no too identify  and by using for loop its continue printing untill i == lenght of v4
-       
-        return f"{self.name} = "+str1                              # dont to return the modified str1[:-1] i used to neglet (+) at end
+          elif i == len(self.a[:-1]) :
+            str1 += f"{self.a[i]}a{index}"       
+            index+=1                             
+        return f"{self.n} = {str1}"                               
     
-    def __add__(self,v6):
-        new_v = []
-        for i in range(len(self.v)):
-            new_v.append(self.v[i] + v6.v[i])
-            
-        return Vectors(new_v,"Z")
+    def __add__(self,v8):
+        new_a = []
+        for i in range(len(self.a)):
+            new_a.append(self.a[i] + v8.a[i])
+        return (f"{Vectors0(new_a,self.n)}")
         
-    def __mul__(self,v6):
-      
+    def __mul__(self,v8):
       dot_product =0
-      for i in range(len(self.v)):
-           dot_product +=self.v[i] * v6.v[i]
-           
+      for i in range(len(self.a)):
+           dot_product +=self.a[i] * v8.a[i]
       return f"|V| = {dot_product}"
 
     def __len__(self):
-      return len(self.v)
+      print( f"{len(self.a)}")
     
         
-    
-        
-v5 = Vectors([1,2,3,4],"v5")        
-print(v5)
-print(len(v5))
+v7 = Vectors0([1,2,3],"v7")        
+print(v7)
+v7.__len__()
 
-v6=Vectors([0,2,4,5],"v6")
-print(v6)
-print(len(v6))
+v8 =Vectors0([0,2,4,5],"v8")
+print(v8)
+v8.__len__()
 
-Z= v5 + v6                  
-print("\nZ = v5 + v6\n",Z)
+A = v7 + v8                  
+print("\nA = v7 + v8\n",A)
 
-V = v5 * v6                  
-print("\nV = v5 * v6\n",V)
+B = v7 * v8                  
+print("\nB = v7 * v8\n",B)
 
