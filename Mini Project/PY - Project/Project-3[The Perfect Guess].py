@@ -19,7 +19,7 @@ def Guess(ply_name):
         
   
     if not ply_choice.isdigit():
-       print("Please enter a valid no.")
+       print("\nPlease enter a valid no.\n")
        continue
   
     ply_choice = int(ply_choice)
@@ -47,7 +47,7 @@ def Guess(ply_name):
     
     else:
      print(f"Out of lives! The correct number was {random_no}.")
-     print("Game over.")
+     print("\n==========.Game over.==========")
      
       
 
@@ -58,8 +58,8 @@ def main():
     
  while 0==0:
         Guess(ply_name)
-        play_again = input("\nDo you want to play again? (y/n): \n").strip().lower()
-        print("--"*10)
+        play_again = input("\nDo you want to play again? (y/n): ").strip().lower()
+        print("\n--"*10)
         
         if play_again != 'y':
             print("\nThanks for playing!")
