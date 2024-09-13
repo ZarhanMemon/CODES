@@ -1,55 +1,65 @@
 import random
 
-ply_name = "Zarhan"
-print("\n      ^^^^^$====The-Perfect-Guess====$^^^^^      \n")
-print(f"Welcome! {ply_name} to Perfect Guess__\n")  
-
   
 
-def Guess():
+def Guess(ply_name):
   
- random_no = random.randint(1,100)
+ random_no = random.randint(0,100)
  #print(random_no)
     
- ply_choice=None
+#  ply_choice=None
  guess =0
  lives = 10
    
- while (ply_choice != random_no):
-   if guess==0:  
-    ply_choice = int(input("\nEnter your guess any no from 1 to 100: "))
-    guess +=1
-   else:
-    ply_choice = int(input("\nEnter your guess no : "))
+ print("Enter your guess (1 to 100):")
+    
+ while lives > 0:
+       
+    ply_choice = input("\nYour guess: ")
+        
   
-   if (ply_choice == random_no):
-     print(f"U have Guessed Right {ply_name}!..\n") 
-     print(f"You guessed the no in {guess} guesses\n")
-
-   else:
-    print(f"Your guessed it wrong***")
-    if (ply_choice > random_no): 
-      print(f"\nHINT : Guess is high, guess low no plz..\n")
-    elif (ply_choice < random_no): 
-      print(f"\nHINT : Guess is low, guess high no plz..\n")
+    if not ply_choice.isdigit():
+       print("Please enter a valid no.")
+       continue
+  
+    ply_choice = int(ply_choice)
+    guess +=1
+    
+  
+    if (ply_choice == random_no):
+     
+     print(f"Congratulations, {ply_name}! You've guessed the number correctly!\n")
+     print(f"You guessed the no in {guess} tries.\n")
+     
     else:
-        print("INVALID")
+     print(f"Your guessed it wrong***")
+    
+    if (ply_choice > random_no): 
+      print(f"\nHINT : Guess Lower\n")
+    else : 
+      print("Hint: Guess Higher.\n")
       
-   lives -= 1
-   if lives>0 and guess!=random_no:
-    print(f"U have {lives} lives left..Play save\n")
-    print("----------------------------------------")
-   else:
-     print(f"The correct guess was {random_no}.")
-     print("\n======You Lost the Game======")
+    lives -= 1
+   
+    if lives>0 and guess!=random_no:
+     print(f"Incorrect. You have {lives} lives left.\n")
+     print("--"*10)
+    
+    else:
+     print(f"Out of lives! The correct number was {random_no}.")
+     print("Game over.")
      
       
 
 def main():
-    while 0==0:
-        Guess()
-        play_again = input("\nDo you want to play again? (y/n): ").strip().lower()
-        print("\n----------------------------------------")
+ ply_name = "Zarhan"
+ print("\n      ^^^^^$====The-Perfect-Guess====$^^^^^      \n")
+ print(f"Welcome! {ply_name} to Perfect Guess__\n")  
+    
+ while 0==0:
+        Guess(ply_name)
+        play_again = input("\nDo you want to play again? (y/n): \n").strip().lower()
+        print("--"*10)
         
         if play_again != 'y':
             print("\nThanks for playing!")
