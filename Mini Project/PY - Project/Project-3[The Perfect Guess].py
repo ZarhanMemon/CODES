@@ -13,7 +13,7 @@ def Guess():
     
  ply_choice=None
  guess =0
- lives = 5
+ lives = 10
    
  while (ply_choice != random_no):
    if guess==0:  
@@ -40,15 +40,17 @@ def Guess():
     print(f"U have {lives} lives left..Play save\n")
     print("----------------------------------------")
    else:
-      print("\n======You Lost the Game======")
-      print(f"The correct number was {random_no}.")
-
-
+     print(f"The correct guess was {random_no}.")
+     print("\n======You Lost the Game======")
+     
+      
 
 def main():
-    while True:
+    while 0==0:
         Guess()
         play_again = input("\nDo you want to play again? (y/n): ").strip().lower()
+        print("\n----------------------------------------")
+        
         if play_again != 'y':
             print("\nThanks for playing!")
             break
