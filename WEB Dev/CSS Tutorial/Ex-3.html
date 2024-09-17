@@ -1,53 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card PNG</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARD</title>
 
-#a{border: 1px rgba(0, 0, 0, 0.42) ;
-   height: 230px;width: 170px;
-   margin: 50px;padding: 5px;
-   border-radius: 3mm; 
-   box-shadow: 0px 0px 10px 0px ;
-   }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-.img{height:40vh; width:169px;
-     border-radius: 3.2mm;
-     }
 
-.span{margin-left:10px;
-     font-size: 10px;
-     font-style: normal;
-     font-family: 'Source Sans Pro', sans-serif;
-     border-radius: 2mm;
-     border: 1px rgba(0, 0, 0, 0.596) solid;
-     padding: 1px;
+    body {
+      background-color: grey;
+      padding: 35px;
+      display: flex;
+    }
 
-}
-
-    </style>
-</head>
-<body>
+    .card {
     
-  <div id="a">
+      background-color: white;
+      width: 189px;
+      border-radius: 7px;
+      padding: 0 0 10px 0;
+      ;
+      margin: 4px;
+      ;
+    }
 
-      <div class="img" > 
-         <img class="img" src="vegita_red&blue.png" alt="" >
-      </div>
+    .img {
+      padding: 5px;
+    }
 
-      <div>
-        <span class="span">Ssgb</span>
-        <span class="span">Ssgr</span>
-   
-      </div>
+    .img img {
+      border-radius: 7px;
+    }
 
-      <div>
-       <h2>Prince of Saiyan</h2>
-   
-        <h6 style="overflow: hidden;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, eius.</h6>
-      </div>
+    .nav {
+      padding: 0px 26px 0px 14px;
+      
+    }
+
+    .nav span {
+      border: 1px solid rgba(169, 169, 169, 0.469);
+      border-radius: 7px;
+      padding: 0px 4px;
+      
+      font-size: 7px;
+      font-family: 'Baloo Bhai 2', sans-serif;
+    }
+
+    .content {
+      padding: 7px 13px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .content h3 {
+      font-size: 17px;
+      padding-top: 5px;
+      padding-left: 2px;
+      padding-bottom: 4px;
+    }
+
+    .content p {
+      margin-left: 5.4px;
+      color: grey;
+      font-size: 8px;
+      overflow: auto;
+      font-weight: 10;
+    }
+
+.button{text-align: center;}
+
+.button button{color: rgb(0, 179, 255);
+               background-color: rgba(0, 208, 255, 0.252);
+              border-radius: 8px;
+              font-weight: bold;
+              padding: 5px 10px;
+              margin: 9px 0;
+              border: none;
+              }
+
+.button button:hover{background-color:rgb(0, 179, 255);
+                     color:  rgb(255, 255, 255);
+                    cursor:pointer;}
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="card">
+
+    <div class="img">
+      <img width="178" height="110" src="vegita_red&blue.png" alt="error">
+    </div>
+
+    <div class="nav">
+      <span>Pride</span>
+      <span>Hardwork</span>
+    </div>
+
+    <div class="content">
+      <h3>Vegita</h3>
+      <p>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, culpa
+       stias sit? Fugiat ea quaerat magnam beatae sequi voluptatum veritatis ipsum, porro repellendus. Reiciendis ducimus unde fugiat dolore.</p>
+    </div>
+
+ <div class="button">
+  <button >Read more</button>
+ </div>
+
+  </div>
+
+
+
 
 
 
@@ -56,4 +127,5 @@
 
 
 </body>
+
 </html>
