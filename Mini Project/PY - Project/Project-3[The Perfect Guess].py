@@ -18,7 +18,7 @@ def Guess(ply_name):
     ply_choice = input("\nYour guess: ")
         
   
-    if ply_choice == none:                   
+    if ply_choice == None:                   
        print("\nPlease enter a valid no.")
        continue
   
