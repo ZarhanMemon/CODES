@@ -18,7 +18,7 @@ def Guess(ply_name):
     ply_choice = input("\nYour guess: ")
         
   
-    if not ply_choice.isdigit():                   # writen for error handle
+    if ply_choice == none:                   
        print("\nPlease enter a valid no.")
        continue
   
