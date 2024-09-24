@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+
+*{margin: 0;padding: 0;
+}
+
+
+ /* 1. here i use [ :root ] --> it apply on universal element but we can use other word also
+    2. if we have to add our variable then print [ --abc : value ; ] in this way
+    3. And if u want to use variable then put [ var(--abc) ] in property of it like [ color , bgcolor , border,etc]
+    4. If u want a backup color in variable itself then print [ var(--abc , other value) ]
+ */
+
+/* NOTE : U CAN USE NOT ONLY COLOR/BGCOLOR BUT ALSO BORDER , PADDING , MARGIN , HIEGHT , WIDHT , etc */
+
+ :root{ --color: orange;    
+         --bgcolor: navy ;      /* <--comment it to see point 4 how work */
+        --defpadding: 30px;
+}
+
+ ul{ color: var(--color);
+      background-color: var(--bgcolor);
+      display:flex;
+      list-style-type: none;
+ }
+
+ ul li:first-child{ 
+    background-color: var(--bgcolor,green);
+}
+
+ ul li{
+    padding: var(--defpadding,35px);
+    background-color: var(--bgcolor);
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <ul>
+      <li>Home</li>
+      <li>Store</li>
+      <li>Other</li>
+    </ul>
+    
+</body>
+</html>
