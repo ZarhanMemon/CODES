@@ -78,7 +78,7 @@ def main():
     
  while 0==0:
         Guess(ply_name)
-        play_again = input("\nDo you want to play again? (y/n): ").strip().lower()
+        play_again = input("\nDo you wish to play again? (y/n): ").strip().lower()
         print("\n")
         print("--"*20)
         

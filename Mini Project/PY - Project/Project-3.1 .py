@@ -34,14 +34,16 @@ def game_over(live, secret_no):
 
 def update_highscore(guess):
     try:
-        with open('highscore.txt', 'r') as f:
+        with open('highscore_Perfect_Guess-3:1.txt', 'r') as f:            #this function will make a file to store high score ok
             high_score = int(f.read())
         if high_score > guess:
-            with open('highscore.txt', 'w') as f:
+            with open('highscore_Perfect_Guess-3:1.txt', 'w') as f:
                 f.write(str(guess))
             print("Updated the high score")
+        else:
+            print("Make a High Score next time **")
     except FileNotFoundError:
-        with open('highscore.txt', 'w') as f:
+        with open('highscore_Perfect_Guess-3:1.txt', 'w') as f:
             f.write(str(guess))
         print("Initial high score set!")
         
@@ -68,6 +70,7 @@ def play_game(player_name):
                 print( "--" * 30+"\n" )
                 
                 update_highscore(guess)
+                print("Your data is stored**")
                 print("\n" + "--" * 30)
                 
                 break
@@ -79,7 +82,7 @@ def play_game(player_name):
             game_over(live, secret_no)
             
             
-        play_again = input("\nDo you want to play again? (y/n): ").strip().lower()
+        play_again = input("\nDo you wish to play again? (y/n): ").strip().lower()
         print("\n")
         
         if play_again != "y":
