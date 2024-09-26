@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Media </title>
+
+    <style>
+ 
+ *{margin: 0;
+   padding: 0;}
+
+
+
+ /* Media Query syntx [basic concept of if-else] -->   
+
+  @media not(or only) media_type[eg:all,print for printer ,screen,speech for people ho cant see] and 
+  ( condition ) {
+                 css-code to print if condition is true
+                        }         */
+
+ .body{--bgcolor:navy;}
+
+ body{ background-color: coral;}
+
+ @media only screen and ( max-width: 455px ) {
+
+   .body{ background-color: var(--bgcolor);
+          border:2px red}
+ }
+
+ 
+/* NOTE : u can also use Oreintation as Landscape or Portrait ok! */
+
+ div{ background-color: purple;
+      padding: 3px; margin: 3px;
+      border: 2px purple;
+      width:34px ; height: 34px;}
+
+#a{ background-color: purple;
+      padding: 3px; margin: 3px;
+      border: 2px purple;
+      width:34px ; height: 34px;}
+ 
+@media only screen and ( oreintation:portrait ) {
+
+ #a{ background-color: rgb(28, 247, 4);
+      display: inline-block; 
+      border: 2px solid rgb(128, 60, 0);}
+}
+
+    </style>
+
+</head>
+<body class="body">
+    
+<div></div>
+<div></div>
+<div></div>
+<div id="a"></div>
+
+
+</body>
+</html>
