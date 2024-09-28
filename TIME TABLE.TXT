@@ -1,6 +1,10 @@
 
 
+
+=====================================================
+
 STUDY SESSION :--
+
 
 Maths      == 4
 Mechanic   == 4
@@ -29,6 +33,8 @@ C          == 3
 ## Fri :- -> Mechanic     == 1 session    +  SKILLS
           -> Maths        == 1 session
                               
+------------------------------------------------------
+
 ## Sat :- -> Skills         
           -> Week-Revision       
           -> Calci Prc         
@@ -36,9 +42,10 @@ C          == 3
 ## Sun :- -> Skills                
           -> C            == 2 session
 
+=====================================================
 
+#COMPLETED
 
-COMPLETED
 
 MATHS    :   Single Variable Calculas 
 
@@ -49,3 +56,22 @@ BXE      :
 Chem     :
 
 C        : 
+
+
+==================================================
+
+
+SKILLS : -> WEB dev
+
+         -> Python++
+         -> Numpy / Panda
+            
+         
+       
+
+
+
+
+
+
+
