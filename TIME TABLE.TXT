@@ -1,0 +1,51 @@
+
+
+STUDY SESSION :--
+
+Maths      == 4
+Mechanic   == 4
+BXE        == 3
+Chemistry  == 3
+C          == 3
+
+
+## Mon :-  -> Maths       == 1 session
+           -> Chemistry   == 2 session
+
+## Tue :-  -> Maths       == 1 session
+           -> Chemistry   == 1 session 
+           -> C           == 1 session 
+
+## Wen :-  -> Maths       == 1 session
+           -> BXE         == 1 session
+           -> C           == 1 session 
+
+## Wen :-  -> Mechanic    == 1 session    +  SKILLS
+           -> BXE         == 1 session
+           
+## Thu :- -> Mechanic     == 2 session
+          -> BXE          == 1 session
+
+## Fri :- -> Mechanic     == 1 session    +  SKILLS
+          -> Maths        == 1 session
+                              
+## Sat :- -> Skills         
+          -> Week-Revision       
+          -> Calci Prc         
+                                    
+## Sun :- -> Skills                
+          -> C            == 2 session
+
+
+
+COMPLETED
+
+MATHS    :   Single Variable Calculas 
+
+Mechanic :
+
+BXE      :
+
+Chem     :
+
+C        : 
