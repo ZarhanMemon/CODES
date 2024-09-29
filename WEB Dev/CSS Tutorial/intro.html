@@ -343,6 +343,76 @@ upper-alpha: uppercase alphabetical letters (A, B, C, etc.) */
    
 }
 
+/* ================================================================== */
+
+/* FLOAT & CLEAR :- */
+
+.class {border: 2px solid red}
+
+.class div{border:2px solid black}
+
+.class img{float: left;
+          /* float: right; */
+          /* float: none; */
+          overflow: auto;}
+
+.class div:nth-child(3){
+       /* clear:left; */
+      clear: right;
+      /* clear: both; */
+  background-color: #0bd098;
+}
+
+/* ==================================================================== */
+
+
+.variables div:first-child{          /*-->this aplied on main content not after/before one ok */
+   background-color: blueviolet;
+}
+
+/* .variables div:nth-child(2){
+  background-color: aquamarine;
+} */
+
+
+
+ .variables div:last-child{      /*-->this aplied on main content not after/before one ok */
+  background-color: #f3e246;
+}
+
+.variables div:nth-last-child(2){
+  background-color: chocolate;
+}
+
+
+.variables::before{
+  content: "Hello i m printed by ::before a Pseudo elm";
+  background-color: blue;
+}
+
+.variables::after{
+  content: "Hello i m printed by ::after a Pseudo elm";
+  background-color: #f3e246;
+}
+
+.variables::first-letter{              /*aply to variable div first letter*/
+  background-color: #ff0def;
+  color: #46f3dc;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.variables::first-line{              /*aply to variable div first line on basis of display*/
+  font-size: medium;
+  color: #f346ce;
+}
+
+
+div::selection{                      /*it aply to all div content only*/
+  background-color: #000000;
+  color: #001ddc;
+  font-weight: bold;
+}
 
   </style>
 
@@ -404,6 +474,15 @@ upper-alpha: uppercase alphabetical letters (A, B, C, etc.) */
   <br>
   <a href="https://www.google.com">Google</a><br>
   <a href="https://www.facebook.com">Facebook</a><br><br>
+
+
+  <h2>More on Variable :-</h2>
+
+  <div class="variables">
+    <div class="var">Hello world</div>
+    <div class="var">hello world</div>
+    <div class="var">hello world</div>
+  </div>
 
 
   ======================================================================
@@ -649,16 +728,42 @@ The Syntax for Outlines is as follows:->  {outline: width style color offset;}
 
 =================================================================<br><br>
 
-<h2>CSS Variables :</h2>
+<h1>CSS Variables :</h1>
 <h3> # Refer in Css Variable.html file ok </h3>
 
 
 =================================================================<br><br>
 
 
+<h1>FLOAT & CLEAR :-</h1>
+
+<!--
+ float -> the content movement we can tell left or right
+     
+ clear -> it tell not to float the other content at the given position(left , rigth , both)  
+ 
+ if theres overlaping problem then solve by giving overflow auto-->
 
 
 
+<div class="class">
+
+  <div>
+
+    <img src="vegita_red&blue.png" width="230" alt="@">
+    <img style="float: right;"  src="vegita_red&blue.png" width="230" alt="@">
+
+  </div>
+
+  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta sequi, excepturi facere doloribus dolorum voluptatibus cum doloremque modi voluptatem architecto, velit impedit aut itaque repellat!
+  </div>
+
+  <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto magnam distinctio omnis sed ipsa velit. Maiores quia recusandae quis consequuntur nobis. At dolorem accusamus in sed reiciendis delectus, sapiente minima eveniet suscipit, obcaecati quaerat odit blanditiis temporibus provident ipsam ut. Reiciendis laborum quae, laudantium expedita sint voluptas eius quisquam iste!uhujjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+  </div>
+
+  <div>Hello3
+  </div>
+</div>
 
 
 
