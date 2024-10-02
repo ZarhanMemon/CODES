@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Color Website</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+    </style>
+
+    <style>
+
+        .box{width:48% ; 
+              height: 350px; 
+              border-radius: 4mm;
+              display: inline-block;
+              margin-top: 18px;
+              margin-bottom: 20px;
+              margin-left: 10px;}
+
+        .green{background-color: green;
+                }
+
+        .red{background-color: red;
+             width: 49%;
+            }
+        
+        .content{position: relative;
+                 top: 23px;
+                 font-size: 50px;
+                 font-weight:bolder;
+                 margin: 21px;
+
+                 color:#090f1b ;
+                 outline: 4px solid #a4d30a ;
+                 padding: 15px;
+                 border: #da0e0e 4px solid;
+                 border-radius: 8mm;              
+                 }
+
+        .content h3,h4{color:#090f1b;
+                    font-size: 50px;
+                    font-weight:bolder;
+                    position: relative;
+                    left: 3% ;}
+
+        .content h4{position: relative;
+                    left: 42% ;
+                     display: inline;}      /*its my mind click */
+
+        .logo img{border-radius: 100%;
+                 position: fixed;
+                 right: 20px;
+                 bottom: 20px;
+                 height: 46px;
+                 width: 45px;
+                 }
+
+
+
+
+
+
+      :root{
+       --bdybackground:#4846d7;
+       --bdycolor:#dfee13ea ;
+       --navbackground:#c56913;
+       --menu_backgroundclr:rgba(157, 228, 17, 0.285);
+       --nav_content_clr:#0a4e52ea;
+      }
+
+
+
+    * {
+            font-family: "Ubuntu", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+    }
+
+        body {background: var(--bdybackground);
+              color: var(--bdycolor);
+              height: 900px;
+        }
+
+        .nav_bar {
+            width: 100%;
+            height: 60px;
+            background-color : var(--navbackground);
+            position: sticky;
+            top: 0; 
+            left: 0;
+            padding: 0 28px;
+        }
+
+        .menu {
+            display: flex;
+            height: 100%; 
+        }
+
+        .menu ul {
+            display: flex; 
+        }
+
+        .menu li {
+            margin: 10px; 
+            top: 3px;
+            padding: 8px;
+            text-decoration: none;
+            list-style: none;
+            font-size:medium;
+        }
+
+        .menu li:hover {
+            padding: 9px;
+            margin: 9px ;
+            align-items: center;
+            border-radius: 13cm;
+            background-color: var(--menu_backgroundclr);
+            cursor: pointer;
+            font-size:large;
+            font-weight:599;
+        }
+
+        .nav_bar .menu ul li a{
+            text-decoration: none;
+            color: var(--nav_content_clr);
+        }
+    </style>
+</head>
+<body>
+<div>
+<div class="nav_bar">
+    <div class="menu">
+        <ul>
+            <li> <a href="#">home</a> </li>
+            <li> <a href="#">profile</a> </li>
+            <li> <a href="#">store</a> </li>
+            <li> <a href="#">other</a> </li>
+        </ul>
+    </div>
+</div>
+
+<div style="background-color: antiquewhite; 
+            padding: 2px;">
+
+  <div class="box green"></div>
+  <div class="box red"></div>
+</div>
+
+<div class="content">
+<h3>Welcome to this Sigma Web Development </h3>
+<h4>Express</h4>
+</div>
+
+<div class="logo"><img src="vegita_red&blue.png"></div>
+
+
+</div>
+</body>
+</html>
