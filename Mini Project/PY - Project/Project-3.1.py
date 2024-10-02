@@ -31,14 +31,15 @@ def game_over(lives, secret_no):
     return False
 
 def update_highscore(guess):
-    folder_path = "D:/Program Files/vs codes/CODES/Mini Project"
+    folder_path = "D:/Program Files/vs codes/CODES/Mini Project/PY - Project"
     os.makedirs(folder_path, exist_ok=True)
     
     highscore_file = os.path.join(folder_path, 'highscore_Perfect_Guess-3:1.txt')
     
     try:
+        # Try to read the current high score
         with open(highscore_file, 'r') as f:
-            high_score = int(f.read())
+            high_score = int(f.read().strip())     # Ensure to strip any whitespace/newlines
         if guess < high_score:
             with open(highscore_file, 'w') as f:
                 f.write(str(guess))
@@ -46,9 +47,13 @@ def update_highscore(guess):
         else:
             print("Make a High Score next time **")
     except FileNotFoundError:
+        # If the file doesn't exist, create it
         with open(highscore_file, 'w') as f:
             f.write(str(guess))
         print("Initial high score set!")
+    except ValueError:
+        print("Error reading high score. Please check the content of the high score file.")
+
 
 def play_game(player_name):
     print("\n ^^^^^$====The-Perfect-Guess====$^^^^^ \n")
