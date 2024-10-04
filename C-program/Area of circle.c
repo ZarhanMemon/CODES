@@ -16,3 +16,7 @@ const float pi=3.14;  // at end (;) must
 
     return 0;
 }
+
+// here the a and r is local var we have code it again in other functions to use it
+// but pi is global var we can use it in other 
+// function and did not to write it's codeagain
