@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Display Flex Box</title>
+
+    <style>
+
+/* Flex display is used on container not on the box in it 
+   
+   --> if u have to acess its property then display flex for container
+   
+## Flex Container Properties:--
+
+  1]  display: Defines the element as a flex container.
+
+
+  2]  flex-direction: Determines the direction(123 or 321 in row & column) 
+                 of flex items (row or column).
+
+  3]  flex-wrap: Controls whether flex items should 
+            wrap( next line mea ) onto multiple lines if its overflow.
+
+  4]  flex-flow: A shorthand for setting both flex-direction and flex-wrap.
+                [: flex-direction flex-wrap ]
+
+
+  5]  justify-content: Aligns flex items along the 
+                 main axis (horizontal or vertical or end or start or center).
+
+  %% justify items nai hota hai %%
+ 
+  6]  align-items: if we have 1 row or coloum only the
+              Aligns the (items inside the container) flex items along 
+             the cross axis (perpendicular to the main axis).
+
+  7]  align-content: if MORE than 1 row or clom Aligns flex 
+                lines when there is extra space on the cross axis.
+
+  8]  gap : spaces **between item** in container (works same as margin but btw items)
+   
+-----------------------------------------------------------------------------------------
+
+
+## Flex ITEMS Properties:--
+
+   1] flex order : from it name it used to change the order of items in containers
+                   --> default order : 0 for all
+                   ->  if the order is high the the items should be last one
+                   ->  if the order is low the items be first one 
+
+   2] Flex Grow:  Ye property batata hai ki ek flex item apne container ke andar kitna space grow karega.
+                  Agar ek item ka flex-grow value 1 hai aur doosre ka 2 hai, toh doosra item pehle se zyada space lega.
+                  Iska matlab hai ki jitna zyada value hoga, utna hi zyada space item ko milega.
+
+   3] Flex Shrink: Ye property ye define karti hai ki jab flex container ka size chhota hota hai,
+                   tab items kaise shrink karte hain. Agar ek item ka flex-shrink value 1 hai aur doosre ka 0 hai, 
+                   toh jab space kam hoga, pehla item shrink hoga lekin doosra nahi hoga. Matlab, jitna zyada value hoga,
+                   utna hi zyada item chhuta hoga.
+
+   4] align self : it seperately or specifically define the position of items only not all items at once
+                   - remove align content and align items to work that
+  
+ 
+*/
+
+.container{
+    border:2px solid blue;
+    width: 90vw;
+    height: 80vh;
+
+    display: flex;
+
+     flex-direction: row;      /* coloum rows and its rev.
+                                  --> if flex-direction : row then ita main axis vica verse column   */
+
+     justify-content:center;    /* left right center --> (Main-axis) is directoin of M-coloum(Y) or M-row(X)*/
+                                                                                             
+    
+     /* align-items: start ;       if no wrap then left right center -->(Cross-axis) perpendicul changes to if C-coloum(X) or C-row(Y) */
+               
+     flex-wrap: wrap;            /*if box overflowing then to print it in next line --> warp*/
+
+     align-content: center;          /*if wrap then left right center -->(Cross-axis) perpendicul changes to if C-coloum(X) or C-row(Y)*/
+   
+     
+    gap: 20px;                   /*gap btw boxes only if only row,coluom then row-gap and coloum-wrap*/
+                                 /*  gap: row-gap coloum-gap;*/
+   
+    }                
+
+
+
+.order-1{
+     order: 1;
+}
+
+.order-2{
+     order: 2;
+}
+
+.order-3{
+     order: 3;
+}
+
+
+ 
+
+.box{height: 62px;
+     width: 62px;
+     background-color: goldenrod;
+     border:2px black solid;
+     /* margin: 3px; */} 
+
+
+
+    </style>
 </head>
 <body>
     
+    <div class="container">
+<!-- all dive with no order is 0 -->
+
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box order-1">3 order-1</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box order-3">10order-3</div>
+        <div class="box order-2">11order-2</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">N</div>
+    </div>
+
 </body>
 </html>

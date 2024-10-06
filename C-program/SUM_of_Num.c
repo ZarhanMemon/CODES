@@ -1,8 +1,8 @@
 // Online C compiler to run C program online
 
 //Step 1 - Start
-#include <stdio.h>
-#int main( ) {
+// include <stdio.h>   
+int main( ) {
   int a , b , c;
   
   //Step 2- Get the variable
