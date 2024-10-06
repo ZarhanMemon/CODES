@@ -10,7 +10,7 @@ Maths      == 4
 Mechanic   == 4
 BXE        == 3
 Chemistry  == 3
-C          == 3
+C          == 4
 
 
 ## Mon :-  -> Maths       == 1 session
@@ -20,17 +20,14 @@ C          == 3
            -> Chemistry   == 1 session 
            -> C           == 1 session 
 
-## Wen :-  -> Maths       == 1 session
+## Wen :-  -> Maths       == 1 session +SKILL
            -> BXE         == 1 session
            -> C           == 1 session 
-
-## Wen :-  -> Mechanic    == 1 session    +  SKILLS
-           -> BXE         == 1 session
-           
-## Thu :- -> Mechanic     == 2 session
+          
+## Thur :- -> Mechanic    == 2 session +SKILL
           -> BXE          == 1 session
 
-## Fri :- -> Mechanic     == 1 session    +  SKILLS
+## Fri :- -> Mechanic     == 2 session  +SKILL
           -> Maths        == 1 session
                               
 ------------------------------------------------------
