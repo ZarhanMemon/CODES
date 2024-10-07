@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID - 1</title>
+
+    <style>
+
+.contianer{
+    border:2px black solid;
+
+    display:grid;
+
+    grid-template-columns: 100px 100px;     /*2 coloumn of 100px*/
+    grid-template-rows:100px 100px 100px;   /*3 rows of 100px*/
+
+/* You can put any names of grid lines(col&rows) :-
+
+ grid-template-columns: [ek] 100px [do] 100px;    
+ grid-template-rows: [phela] 100px [dosra] 100px [hello] 100px;   
+ */
+
+
+}
+
+
+.items{
+    border:2px rgb(0, 17, 255) solid;
+    /* height: 55px;
+    width: 55px; */
+}
+
+.items-4{
+   background-color: aquamarine;   
+
+   grid-row: 2/3;
+   grid-column: -3/-2;      /*if u put -1 in place of -2 then it will extend to col(-1) and hence shift 3-item to down in place of 5-item and also it move forward*/
+                            /*== 1/2*/
+
+/* or u can do same thing
+   grid-row-start:2
+   grid-row-ends:3
+   grid-coloumn-start:-3
+   grid-coloumn-ends:-3
+
+*/
+    
+}
+
+</style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items items-4">4</div>
+        <div class="items">5</div>
+    </div>
+</body>
+</html>
