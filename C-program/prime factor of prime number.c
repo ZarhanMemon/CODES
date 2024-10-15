@@ -36,13 +36,13 @@ else{
     printf("\n The number %d is not a prime number",num);
 }    
 
-int factorial = 2;
+int factor = 2;
 
 if (~is_prime){
 printf("\nThe prime factors of %d are :",num);
      
      while (num>1){
-         if (num % factorial ==0){
+         if (num % factor ==0){
              
              printf(" %d,", factor);
              num = num / factor;
