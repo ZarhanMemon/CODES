@@ -38,17 +38,17 @@ else{
 
 int factorial = 2;
 
-if (is_prime){
-printf("The prime factors of %d are :",num);
+if (~is_prime){
+printf("\nThe prime factors of %d are :",num);
      
      while (num>1){
          if (num % factorial ==0){
              
-             printf(" %d number", factorial);
-             num = num / factorial;
+             printf(" %d,", factor);
+             num = num / factor;
          }
          else{
-             factorial++;
+             factor++;
          }
      }
 }    
