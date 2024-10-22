@@ -10,14 +10,14 @@ scanf("%d",&n);
 
 printf("\n Fibonacci series :");
 
-while (count<n){
+	while (count<n){
 
- next = first + second;
- printf("%lu",first);
- first=second;
- second = next ;
- count++;
-}
+ 	next = first + second;
+ 	printf("%lu\t ",first);
+ 	first=second;
+ 	second = next ;
+ 	count++;
+	}
 
-return 0;
+  return 0;
 }
