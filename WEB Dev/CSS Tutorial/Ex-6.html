@@ -1,83 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nav bar with flex box</title>
-
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
-* {
-            font-family: "Ubuntu", sans-serif;
-            margin: 0;
-            padding: 0;
-            text-transform: capitalize;
-            text-decoration: none;
-            list-style-type: none;
+    <title>Solution 6</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            font-weight: 400;
         }
 
-nav .main {
-    padding: 9px;
-    width: 97.6%;
-    height: 60px;
-    
-    background-color:rgb(77, 4, 225);
+
+        .logo img {
+            height: 50px;
+        }
+
+
+        .nav_bar,
+        .right ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            column-gap: 25px;
+        }
+
+        .right ul li {
+            list-style: none;
+            display: flex;
+            cursor: pointer;
+        }
 
     
-}        
-            
-nav .main .content a{
-    text-decoration: none;
-    list-style: none;
-    color: rgb(0, 0, 0);
-}        
-     
-nav .main {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    column-gap: 22px;
-}
-
-nav .main .content:hover{
-    cursor: pointer;
-    font-size: large;
-    font-weight: 599;
-    background-color: cadetblue;
-    padding: 10px;
-    border-radius: 88mm;
-    
-    column-gap: 25px;
-}
-
-
-
-</style>
-
+    </style>
 </head>
+
 <body>
 
-<nav> 
+    <header>
+        <nav>
+            <div class="nav_bar">
+                <div class="logo">
+                    <img src="UE-Logo-1.webp" alt="">
+                </div>
 
-<div class="main">
-<div class="content"><a>product</a></div>
-<div class="content"><a>for business</a></div>
-<div class="content"><a>resourses</a></div>
-<div class="content"><a>store</a></div>
-<div class="content"><a>our company</a></div>
+                <div class="right">
+                    <ul>
+                        <li> <span>Product</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></li>
+                        <li> <span>For business</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                width="24" height="24" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></li>
+                        <li> <span>Resources</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                width="24" height="24" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span></li>
+                        <li> <span>Support</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                height="24" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></li>
+                        <li> <span>Our company</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                width="24" height="24" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></li>
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
 
- </div>
-</nav>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
 
 </body>
+
 </html>
-
- 
-
- 
-
- 
-
- 
