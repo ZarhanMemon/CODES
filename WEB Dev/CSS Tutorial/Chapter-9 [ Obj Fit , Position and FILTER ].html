@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit and Position  &  FILTER</title>
+    <style>
+
+
+
+        .container {
+            height: 488px;
+            width: 466px;
+            border: 2px solid black;
+            /* background-color: azure; */
+            /* background-position: center center;
+            background-clip: border-box;
+
+            background-image: url("https://us.123rf.com/450wm/progressman/progressman1909/progressman190900115/130695651-woman-in-black-coat-walking-along-the-sea.jpg?ver=6");
+            
+            --> if img is small in size then it repaet to cover container
+              background-repeat: no-repeat;
+        */
+        }
+
+        img {
+            width: 466px;
+            height: 488px;
+
+            /* object-fit:fill;  -- > default */
+            object-fit: cover; object-position:  left bottom;
+            /* object-fit: contain; object-position: right  ; */
+
+
+        }
+
+      img:nth-last-child(1){
+            filter: blur(10px);
+        }
+
+        .img1{
+            filter: brightness(1221%);
+        }
+
+        .img2{
+            filter:saturate(3222%)
+        }
+
+        .img3{
+            filter: grayscale(20%);
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- ### Object Fit and Object Position
+
+**Object Fit**:  
+This CSS property defines how an element (like an image or video) should be resized to fit its container. Its values include:
+- **fill**: The content fills the container, which may distort its aspect ratio.
+- **contain**: The content scales to maintain its aspect ratio while fitting within the container, possibly leaving empty spaces.
+- **cover**: The content scales to cover the entire container while maintaining its aspect ratio. Parts of the content may be clipped.
+- **none**: The content retains its original size without resizing.
+- **scale-down**: The content is sized as either `none` or `contain`, whichever is smaller.
+
+**Object Position**:  
+This property determines how an object is positioned within its container. Its values include:
+- **left**: Positions the object to the left.
+- **right**: Positions the object to the right.
+- **top**: Positions the object at the top.
+- **bottom**: Positions the object at the bottom.
+- **center**: Positions the object in the center.
+
+### Summary:
+- **Object Fit**: Controls how content fits within a container.
+- **Object Position**: Defines the positioning of the content within its container. -->
+
+
+
+
+
+
+
+    <div class="container">
+
+<!-- OBJECT - FIT & POSITION -->
+
+        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+            alt="">
+    </div>
+
+
+    <!-- FILTER  -->
+
+    <img class="img1" src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?size=626&ext=jpg" alt="">
+    <img class="img2" src="https://c.ndtvimg.com/2023-09/154fgjlg_shah-rukh-khan-_625x300_23_September_23.jpg" alt="">
+    <img class="img3" src="https://images.hindustantimes.com/img/2022/11/12/550x309/akshay_kumar_1659860706633_1668255913307_1668255913307.jpg" alt="">
+
+
+</div>
+</body>
+
+</html>
