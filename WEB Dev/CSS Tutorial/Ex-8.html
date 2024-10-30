@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        /* CSS mein animation ek technique hai jo web pages par movement aur visual effects add karne ke liye use hoti hai. Animation ko CSS ke through aasani se apply kiya ja sakta hai, jisse elements ki position, size, color, aur transparency time ke saath change hoti hai.
+
+Main Features:
+
+1] @keyframes: Yeh rule animation ke stages ko define karta hai. Ismein yeh decide hota hai ki animation kaise start hota hai, beech mein kya hota hai, aur kaise end hota hai.
+
+2] animation-name: Yeh animation ka naam specify karta hai, jo @keyframes mein defined hota hai.
+
+3] animation-duration: Yeh batata hai ki animation kitne time mein complete hoga.
+
+4] animation-timing-function: Yeh animation ki speed ko control karta hai, jaise fast, slow, ya same speed.
+
+5] animation-delay: Yeh determine karta hai ki animation shuru hone mein kitna time lagega.
+
+6] animation-iteration-count: Yeh batata hai ki animation kitni baar chalega. */
+
+
+        .container {
+            padding: 40px;
+            height: 50vh;
+            width: 70vw;
+            background-color: cornflowerblue;
+            align-content: center;
+        }
+
+
+        .ground .grass {
+            background-color: green;
+            color: green;
+        }
+
+        .ground .mud {
+            background-color: rgb(18, 76, 19);
+            height: 2px;
+            position: relative;
+            bottom: 22px;
+            color: cornflowerblue;
+        }
+
+        .box {
+            padding: 13px;
+            border-radius: 9mm;
+            height: 18px;
+            width: 18px;
+            background-color: blueviolet;
+            border: rgb(78, 22, 78) 2px solid;
+            box-shadow: inset -4px 7px 8px 3px yellow;
+            
+
+            text-align: center;
+            align-content: center;
+
+            animation-name: wheel_X_axis ;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: 0.8s;
+            animation-direction: alternate;
+
+
+
+
+            /* animation-name: harryKaAnimation; 
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0, 0, 0, 0.96);
+            animation-delay: 1s;
+            animation-direction: reverse;
+            animation-play-state: paused; */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+
+        @keyframes wheel_X_axis {
+            from {}
+
+            to {
+                transform: translateX(63vw) rotate(720deg);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="system">
+            <div class="box">
+                
+            </div>
+            <div class="ground">
+                <div class="grass">.</div>
+                <h2 class="mud"></h2>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
