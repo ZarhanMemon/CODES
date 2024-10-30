@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Transform </title>
+</head>
+
+<style>
+    .container {
+        margin: 30px auto;
+        max-width: 1000px;
+        width: 90vw;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        font-family: sans-serif;
+    }
+
+    .box {
+        width: calc(20%);
+        margin: 20px 20px;
+        background: #09edea;
+        cursor: pointer;
+        color: #dc5959;
+        text-align: center;
+        line-height: 130px;
+
+    }
+
+    .scaleX:hover {
+        transform: scaleX(1.5);
+    }
+
+    .scaleY:hover {
+        transform: scaleY(1.5);
+    }
+
+    .scale:hover {
+        transform: scale(1.5, 1.5);
+    }
+
+    .translateX:hover {
+        transform: translateX(50%);
+    }
+
+    .translateY:hover {
+        transform: translateY(50%);
+    }
+
+    .translate:hover {
+        transform: translate(25%, 25%);
+    }
+
+
+    .rotate:hover {
+        transform: rotate(-290deg);
+    }
+
+    .rotateX:hover {
+        transform: rotateX(45deg);
+    }
+
+    .rotateY:hover {
+        transform: rotateY(45deg);
+    }
+
+
+    .skew:hover {
+        transform: skew(30deg, 20deg);
+    }
+
+    .skewX:hover {
+        transform: skewX(30deg);
+    }
+
+    .skewY:hover {
+        transform: skewY(30deg);
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="box scaleX">ScaleX</div>
+        <div class="box scaleY">ScaleY</div>
+        <div class="box scale">Scale</div>
+
+
+        <div class="box translateX">TranslateX</div>
+        <div class="box translateY">TranslateY</div>
+        <div class="box translate">Translate</div>
+
+        <div class=" box rotateX">RotateX</div>
+        <div class="box rotateY">RotateY</div>
+        <div class="box rotate">Rotate</div>
+
+        <div class="box skew">Skew</div>
+        <div class="box skewX">SkewX</div>
+        <div class="box skewY">SkewY</div>
+
+
+    </div>
+
+
+</body>
+
+</html>
