@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+body {
+    background: #000;
+    max-width: 100%;
+}
+
+.main {
+    background-image: url("backgroond.jpg");
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 644px;
+    position: relative;
+
+}
+
+.main .box {
+    height: 644px;
+    width: 100%;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+.main nav {
+    max-width: 60vw;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    height: 90px;
+
+}
+
+nav button ,nav select {
+    position: relative;
+    z-index: 10;
+    margin: 5px;
+}
+
+.main nav img {
+    color: red;
+    width: 130px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.detail {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 90px);
+    position: relative;
+    z-index: 10;
+    color: #f7f7f7;
+    row-gap: 21px;
+    padding: 0 34px;
+}
+
+
+
+.detail span:first-child,
+.detail span:nth-child(2) {
+
+    display: block;
+    line-height: 60px;
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.detail span:nth-child(3) {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.detail span:nth-child(4) {
+    line-height: 27px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.detail input{
+    display: inline;
+}
+
+.seperation_line {
+    background-color: rgba(130, 130, 130, 0.667);
+    height: 5.5px;
+    opacity: 0.4;
+}
+
+.btn_1 {
+    padding: 3px 8px;
+    font-weight: 480;
+    border-radius: 1mm;
+    border: 1px solid rgba(255, 255, 255, 0.137);
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.main input {
+    font-family:"Poppins", sans-serif;
+    padding:7px 80px 9px 14px;
+    color: white;
+    font-size: 17px;
+    font-style: normal;
+    border-radius: 1mm;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    vertical-align: middle;
+}
+
+.btn_3 {
+    margin-top: 3px;
+    margin-left: 15px;
+    border-radius: 1mm;
+    border: 1px solid rgba(255, 255, 255, 0.137);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    padding: 4.9px 25px;
+    font-size: 23px;
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: 550;
+ 
+}
+
+.red_btn {
+    color: #f7f7f7;
+    background-color: rgb(240, 24, 24);
+}
+
+.transprnt_btn {
+    background-color: #ffffff00;
+    color: #f7f7f7;
+    border: 0.5px solid rgba(246, 238, 238, 0.274);
+}
