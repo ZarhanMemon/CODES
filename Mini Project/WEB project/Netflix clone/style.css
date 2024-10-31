@@ -300,6 +300,12 @@ section.first>div :nth-child(2) {
 
 .faqbox:hover {
     background-color: #414141;
+    font-size: 28.5px;
+}
+
+.faqbox:hover svg{
+    transform: rotateZ(45deg) ;
+    transition: all 1s ease-in-out;
 }
 
 .faqbox svg {
