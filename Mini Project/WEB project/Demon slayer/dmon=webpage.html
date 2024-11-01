@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    }
+
+
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main-widht {
+        width: 1400px;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .hero {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/708/846/337/anime-demon-slayer-kimetsu-no-yaiba-tanjirou-kamado-hd-wallpaper-preview.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+
+    }
+
+    .hero .main-widht header .logo h2 a {
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: block;
+    }
+
+    .hero header {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 44px 0px 33px;
+    }
+
+    header ul {
+        display: flex;
+        gap: 33px;
+    }
+
+
+    header li a {
+        color: white;
+        text-decoration: none;
+        margin-left: 80px;
+        font-weight: 600;
+        font-size: 21px;
+        border-bottom: 2px solid transparent;
+        transition: .4s;
+    }
+
+    header li:not(:last-child) a:hover,
+    header li:not(:last-child) a:focus {
+        border-bottom: 2px solid white;
+    }
+
+    header nav li.active a {
+        border-bottom: 2px solid white;
+
+    }
+
+    header nav li.btn a {
+        background: transparent;
+        border: 2px solid #f5dca8;
+        color: white;
+        padding: 9px 20px;
+        border-radius: 80px;
+        line-height: 1.4;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 150px;
+
+    }
+
+    header nav li.btn:hover a {
+        background: rgb(255, 255, 255);
+        border: 2px solid #ffffff;
+        color: black;
+        transition: .4s;
+        font-size: 22px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+      
+    }
+
+    .main_content {
+        padding-top: 140px;
+    }
+
+    .main_content .main_text {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 50px;
+        color: #ffffff;
+    }
+
+    .main_content .main_text h6 {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    .main_content .main_text h1 {
+        font-size: 60px;
+        line-height: 1;
+        margin: 0px 0px 45px;
+        font-family: 'Permanent Marker', cursive;
+    }
+
+    .main_content .main_text p {
+        max-width: 100%;
+        width: 480px;
+        font-size: 15px;
+        margin-bottom: 50px;
+        line-height: 1.8;
+    }
+
+    .main_content div a {
+        display: inline-block;
+        background: rgb(255, 255, 255);
+        border: 2px solid #ffffff;
+        color: rgb(0, 0, 0);
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 10px 25px;
+    }
+
+    .main_content div:hover a {
+    
+        background: transparent;
+        border: 2px solid #ffffff;
+        color: rgb(255, 255, 255);
+        transform: scale(1.1);
+        transition: .4s;
+        
+    }
+
+           /* Media Queries for Responsiveness */
+           @media (max-width: 1200px) {
+            .main-width {
+                width: 90%; /* Reduce width for medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-width {
+                width: 95%; /* Further reduce width for smaller screens */
+                padding: 10px; /* Adjust padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-width {
+                width: 100%; /* Full width for mobile screens */
+                padding: 5px; /* Reduce padding */
+            }
+        }
+</style>
+
+<body>
+    <section class="hero">
+        <div class="main-widht">
+            <header>
+                <div class="logo">
+                    <h2><a href="#">ABCD</a></h2>
+                </div>
+
+                <nav>
+                    <ul type="none">
+                        <li class="active"><a href="#">Seasons</a></li>
+                        <li><a href="#">Episode</a></li>
+                        <li><a href="#">Manga</a></li>
+                        <li class="btn"><a href="#">Play Now</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="main_content">
+                <div class="main_text">
+                    <h6>#1 Best Anime <br>Japanese manga series by Koyoharu Gotōge </h6>
+                    <h1>DEMON SLAYER</h1>
+                    <p>"Demon Slayer," or "Kimetsu no Yaiba," is a Japanese manga series by Koyoharu Gotōge set in the
+                        early 20th century during the Taishō era. It follows Tanjiro Kamado, a young boy whose family is
+                        slaughtered by man-eating demons. The only survivors are Tanjiro and his sister Nezuko, who,
+                        unfortunately, is slowly transforming into a demon herself. Driven by the desire to save his
+                        sister and avenge his family, Tanjiro becomes a demon slayer.</p>
+                </div>
+
+                <div><a href="#">Watch Now</a></div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
