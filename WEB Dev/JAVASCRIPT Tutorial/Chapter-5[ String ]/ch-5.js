@@ -22,9 +22,9 @@ console.log(b.toLowerCase())
 console.log(b.length) 
 console.log(b.slice(1, 5)) 
 console.log(b.slice(1))
-console.log(b.startswith("S")
-console.log(b.startswith("s")
-console.log(b.endswith("h")
+console.log(b.startsWith("S"))
+console.log(b.startsWith("s"))
+console.log(b.endsWith("h"))
 
 console.log(b.replace("Sh", "77")) // it only replaces first Sh not last Sh
 console.log(b.concat(a, "Aishwariya", "Rahul", "Priya"))   // it works same like--> C.L( "djwnd" + "dwjnd")
