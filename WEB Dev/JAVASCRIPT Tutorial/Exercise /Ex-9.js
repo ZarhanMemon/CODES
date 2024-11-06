@@ -70,6 +70,10 @@ let Faulty_calci = (a, b, s) => {
             console.log(a, s, b, " = ", c);
 
         }
+        else if(b==0){
+            console.log("Can't be divisible by",b);
+
+        }
     }
 
 }
@@ -80,3 +84,6 @@ let Faulty_calci = (a, b, s) => {
  Faulty_calci(2, 4, " - ");
  Faulty_calci(2, 4, " x ");
  Faulty_calci(2, 4, " / ");
+
+
+
