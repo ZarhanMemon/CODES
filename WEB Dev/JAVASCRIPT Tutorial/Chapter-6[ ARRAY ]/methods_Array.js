@@ -11,7 +11,11 @@ console.log(arr.toString())  // convert array to string [its immutable]
 console.log()
 
 
+
 console.log(arr.join(" or "))  // join any string at end of every element in array 
+
+//Note : .join convert array into string 
+console.log(typeof arr.join(" or "))
 
 
 console.log()
