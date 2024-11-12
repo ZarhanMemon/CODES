@@ -23,7 +23,7 @@ int main() {
     
     
     aggregate = (total / 5);
-    
+    printf("\n");
   
     if (!pass) {
         printf("\n Result: Fail\n\n");
