@@ -46,3 +46,23 @@ int main() {
 
     return 0;
 }
+
+
+// OUTPUT :- 
+
+//     Enter the marks of five subjects out of 100:
+
+// Subject 1: 99
+// Subject 2: 99
+// Subject 3: 99
+// Subject 4: 99
+// Subject 5: 99
+
+// Result: Pass
+
+// Aggregate Percentage:  99.0% 
+
+// Grade: Distingtion
+
+
+// === Code Execution Successful ===
