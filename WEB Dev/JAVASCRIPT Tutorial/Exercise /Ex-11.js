@@ -1,16 +1,27 @@
+
 // Write a program to calculate factorial of a number using reduce and using for loops
 
 
 // 6! = 6*5*4*3*2*1
 
-let array = [6, 5, 4, 3, 2, 1];
+ 
+ 
+let factorial_1 = (n) => {
 
-let factorial_1 = (array) => {
-    let result = array.reduce((acc, crr) => acc * crr, 1);
-    console.log("\nThe " + array[0] + "! factorial is " + result + ".\n");
+    const array_factorial = (n) => {
+        let a = [];
+        for (let i = 1; i <= n; i++) {
+            a.unshift(i)
+        }
+        return a;
+    }
+
+    let a = array_factorial(n);
+    let result = a.reduce((acc, crr) => acc * crr, 1);
+    console.log("\nThe " + a[0] + "! factorial is " + result + ".\n");
 }
 
-factorial_1(array);
+factorial_1(6);
 
 
 
