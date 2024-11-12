@@ -9,8 +9,8 @@ int main() {
     printf("Enter the marks of five subjects out of 100:\n");
     
  
-    for (i = 0; i < 5; i++) {
-        printf("Subject %d: ", i + 1);
+    for (i = 1; i < 6; i++) {
+        printf("Subject %d: ", i);
         scanf("%f", &marks[i]);
         
       
@@ -22,14 +22,15 @@ int main() {
     }
     
     
-    aggregate = total / 5;
+    aggregate = (total / 5);
     
   
     if (!pass) {
         printf("\n Result: Fail\n\n");
-    } else {
+    } 
+    else {
         printf("Result: Pass\n\n");
-        printf("Aggregate Percentage: %.2f%% \n\n", aggregate);  
+        printf("Aggregate Percentage:  %.1f%% \n\n", aggregate);  
         
  
         if (aggregate >= 75) {
