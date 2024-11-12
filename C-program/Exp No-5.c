@@ -40,3 +40,15 @@ int main() {
 
     return 0;
 }
+
+
+// OUTPUT:-
+
+//     Enter the first number: 2
+// Enter the second number: 3
+// Smallest divisor of 2 is: 2
+// Smallest divisor of 3 is: 3
+// The greatest common divisor (GCD) of 2 and 3 is: 1
+
+
+// === Code Execution Successful === **
