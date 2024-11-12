@@ -34,7 +34,7 @@ int main() {
         
  
         if (aggregate >= 75) {
-            printf("Grade: Distinguished\n");
+            printf("Grade: Distingtion\n");
         } else if (aggregate >= 60) {
             printf("Grade: First Division\n");
         } else if (aggregate >= 50) {
