@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling</title>
+    <style>
+        .home {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+
+        .Pune {
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .India {
+            background-color: rgb(227, 227, 28);
+            padding: 14px;
+            margin: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="India">
+        <section class="Pune">
+            <div class="home">
+                I am a child
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".home").addEventListener("click", (e) => {
+            e.stopPropagation()                                                // .stopPropo is used to stop bubbling to go further for pune and india if it is not clicked
+            alert("Home Was clicked")
+        })
+
+        document.querySelector(".Pune").addEventListener("click", (e) => {
+            // e.stopPropagation()
+            alert("Pune Was clicked")
+        })
+
+        document.querySelector(".India").addEventListener("click", (e) => {
+            alert("India Was clicked")
+        })
+
+
+
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+
+
+        let a = setInterval(() => {
+
+            document.querySelector(".India").style.backgroundColor = getRandomColor();
+
+        }, 1000);          // 1000 time in milli sec
+
+        console.log(a);
+
+        //we can use clearInterval(1) to stop the setinterval 
+
+        let b = setTimeout(() => {
+
+            document.querySelector(".Pune").style.backgroundColor = getRandomColor();
+
+        }, 5000);       // 1000 time in milli sec
+
+        console.log(b);
+
+        //we can use clearTimeout(1) to stop the settimeout 
+
+
+
+    </script>
+</body>
+
+</html>
