@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling</title>
+    <style>
+        .home {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+
+        .Pune {
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        .India {
+            background-color: rgb(227, 227, 28);
+            padding: 14px;
+            margin: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="India">
+        <section class="Pune">
+            <div class="home">
+                I am a Home
+            </div>
+        </section>
+    </div>
+    <script>
+        document.querySelector(".home").addEventListener("click", (e) => {
+            e.stopPropagation()                                                // .stopPropo is used to stop bubbling to go further for pune and india if it is not clicked
+            alert("Home Was clicked")
+        })
+
+        document.querySelector(".Pune").addEventListener("click", (e) => {
+           // e.stopPropagation()
+            alert("Pune Was clicked")
+        })
+
+        document.querySelector(".India").addEventListener("click", (e) => {
+            alert("India Was clicked")
+        })
+
+</script>
+</body>
+
+</html>
