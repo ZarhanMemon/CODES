@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: red;
+        }
+
+        .active {
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2 id="h2">
+        hello click this button ..
+    </h2>
+
+    <button class="btn">Click!</button>
+
+    <script>
+
+
+        let btn = document.querySelector("button");
+        let text = 'heelo';
+
+
+
+
+        btn.addEventListener('click', () => {
+
+
+            document.body.classList.toggle("active");
+
+            document.querySelector("h2").innerText = ' hiii ';
+
+
+        }
+        )
+
+        btn.removeEventListener('click', changes)
+
+    </script>
+</body>
+
+</html>
