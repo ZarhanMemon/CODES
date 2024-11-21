@@ -70,6 +70,7 @@ promise3.then((res)=>{
     console.log("Nahi hora match",err)
 })
 
+// --------------------------------------------------------------------
 
 
 //Promises Chain :- p.then(..).then --> ..  like alternate for callback chain
@@ -86,3 +87,20 @@ p.then(()=>{
 }).then(()=>{
     console.log("This is promises.then chain")
 })
+
+// --------------------------------------------------------------------
+
+
+// Multi .THEN on P
+
+let q = new Promise((resolve, reject) => {
+    console.log("Multi .THEN on P")
+    resolve();
+})
+
+
+q.then(()=>{ console.log("1") });
+
+q.then(()=>{ console.log("2") });
+
+q.then(()=>{ console.log("3") });
