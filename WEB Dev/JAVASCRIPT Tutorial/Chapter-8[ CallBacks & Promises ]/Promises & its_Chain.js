@@ -69,3 +69,20 @@ promise3.then((res)=>{
 }).catch((err)=>{
     console.log("Nahi hora match",err)
 })
+
+
+
+//Promises Chain :- p.then(..).then --> ..  like alternate for callback chain
+
+let p = new Promise((resolve, reject) => {
+    console.log("Task1")
+    resolve();
+})
+
+p.then(()=>{
+    console.log("Task2")
+}).then(()=>{
+    console.log("Task3")
+}).then(()=>{
+    console.log("This is promises.then chain")
+})
