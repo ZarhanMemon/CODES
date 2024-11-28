@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throwing Error</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        let a = prompt("Enter the num1 :");
+        let b = prompt("Enter the num1 :");
+
+        let c = parseInt(a) + parseInt(b);
+
+        if (typeof a == "string" && typeof a == "string") {
+
+            //throw new Error("Oe number dallo"); -->   custom error tag
+            throw SyntaxError("a and b not a number..");
+
+        }
+        else {
+            console.log(typeof c);
+            console.log(`the answer of c : ${c}`);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
