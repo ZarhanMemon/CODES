@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+        // In short:
+
+        // 1. Inside the function, after return: Any code after the return inside the same block will not run.
+
+        // 2. Outside the function: Code after calling the function will still run, 
+        // because it's not inside the function itself, so it is unaffected by the return inside the function.
+
+
+
+        //===========================================================================
+
+        let a = 2;
+        let b = 3;
+
+        try {
+
+            console.log(`the answer of a*b: ${a * b}`);
+
+        } catch (error) {
+
+            throw new Error("Sorry we are noob!!");
+
+        }
+
+        // ----------------------------------------------------
+
+        //IMP:- since trycatch is sync in js and if we use Async in it hecne below u see catch is not executed 
+
+
+        try {
+            setTimeout(() => {
+                dwdwdwd         //error code only to see eg
+            }, 300);
+
+        } catch (error) {
+            console.log('ruko Age bado bahi');
+            throw new Error("Age bado bahi");
+
+        }
+
+        console.log('hello');
+        console.log('hii');
+
+
+        //Output:
+
+        // hello
+        // hii
+        // Uncaught ReferenceError: hellp is not defined
+        //     at script2.js: 21: 9
+
+        //see there is not catch error here
+
+
+
+        // ERROR OBJECT:-
+
+        try {
+            dwd;
+        } catch (error) {
+            console.log(error.name);      //ReferenceError                               
+            console.log(error.message);   //dwd is not defined
+            console.log(error.stack);     //ReferenceError: dwd is not defined [name + msg]
+
+            //Uncaught ReferenceError: dwdwdwd is not defined (error msg real)                             
+        }
+
+
+
+        //--------------------------------------------------------------------------
+
+        // IMP:  FINALLY v/s Return
+
+
+        //-> it is a clause which is used to execute line after try catch inside a function beacuse in func return can be used so to counter its further effects finnally block its effect further
+
+        function main() {
+            let x = 1;
+            try {
+                console.log("The sum is ", 34 * x)
+                return true
+
+            } catch (error) {
+                console.log("Error aa gaya bhai")
+                return false
+            }
+
+            //  ans  
+            finally {
+                console.log("files are being closed and db connection is being closed")
+            }
+
+            console.log("files are being closed and db connection is being closed")
+            //see how the colour is fade means [ Unreachable code detected ] solution up
+
+        }
+
+        main()
+
+
+
+
+    </script>
+</body>
+
+</html>
