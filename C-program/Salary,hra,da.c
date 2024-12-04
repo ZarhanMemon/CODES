@@ -1,5 +1,7 @@
  
-// Write a C-program for employee salary calculation given,Basic ,HRA 20% of basic and DA 150% of basic
+//Salary of employee
+//Roll no - 35
+//Div - A
 
 #include <stdio.h>
 int main() {
@@ -22,3 +24,10 @@ printf("\nThe gross salary for %d$ basic, %d$ da and %d$ hra is %d$.",basic,da,h
  
 return 0;
 }
+
+// Output
+
+//Enter your salary:30000
+
+// The gross salary for 30000$ basic, 45000$ da and 6000$ hra is 81000$.
+
