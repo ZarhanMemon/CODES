@@ -1,7 +1,7 @@
 // Online C compiler to run C program online
 
 //Step 1 - Start
-// include <stdio.h>   
+include <stdio.h>   
 int main( ) {
   int a , b , c;
   
