@@ -1,5 +1,8 @@
-#include <stdio.h>
+//Experiment No - 5
+//Roll no - 35
+//Div - A
 
+#include <stdio.h>
 // Function to compute the GCD of two numbers
 int gcd(int a, int b) {
     while (b != 0) {
