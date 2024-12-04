@@ -1,3 +1,8 @@
+ 
+//Salary of employee
+//Roll no - 35
+//Div - A
+
 #include <stdio.h>
 int main(){
 
@@ -21,3 +26,10 @@ printf("\n Fibonacci series :");
 
   return 0;
 }
+
+
+//Output 
+
+//Enter the number (positive num) of fibonacci no to be generated: 10
+
+//Fibonacci series :0	 1	 1	 2	 3	 5	 8	 13	 21	 34	 
