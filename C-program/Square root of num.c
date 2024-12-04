@@ -1,3 +1,8 @@
+
+//Salary of employee
+//Roll no - 35
+//Div - A
+
 #include <stdio.h>
 #include <math.h>
 
@@ -18,3 +23,11 @@
 
     return 0;
 }
+
+
+//Output 
+
+//Enter the number to square-root:4
+
+// /4 = +-2
+// The result of square root 4 is +- 2
