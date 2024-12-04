@@ -1,3 +1,8 @@
+ 
+//Explain No - 3.3
+//Roll no - 35
+//Div - A
+
 
 #include <stdio.h>
 
@@ -41,3 +46,20 @@ int main() {
 
     return 0;
 }
+
+
+//Output 1 -
+
+//Enter the number for checking its prime number: 3
+
+//The number 3 is a prime number.
+
+
+//Output 2 -
+
+//Enter the number for checking its prime number: 4
+
+//The number 4 is not a prime number.
+//The prime factors of 4 are: 2 2
+
+
