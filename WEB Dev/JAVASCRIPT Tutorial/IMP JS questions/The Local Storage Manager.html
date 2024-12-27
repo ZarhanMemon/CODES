@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>
+        Note here!
+    </button>
+
+    <div>
+    </div>
+
+    <script>
+    
+    // The Local Storage Manager: You are working on a note-taking app, and you want to implement a function named saveNoteToLocalStorage that takes a note object and saves it to the browser's local storage.
+
+
+
+        // Function to save the note to local storage
+        function saveNoteToLocalStorage(display_note) {
+            localStorage.setItem("display_note", display_note);
+        }
+
+        // Function to retrieve and display the saved note
+        function main() {
+
+            let display_note = prompt("Enter your note:");
+            saveNoteToLocalStorage(display_note);
+
+            // Display the note in a more controlled way
+            document.querySelector('div').innerHTML = "<h1>Your Note:</h1><p>" + display_note + "</p>";
+        }
+
+        // Retrieve the note from local storage and display it (if it exists)
+        function displaySavedNote() {
+            let savedNote = localStorage.getItem("display_note");
+            if (savedNote) {
+                document.querySelector('div').innerHTML = "<h1>Saved Note:</h1><p>" + savedNote + "</p>";
+            } else {
+                document.querySelector('div').innerHTML = "<h1>No saved note found.</h1>";
+            }
+        }
+
+
+        // You can also display the saved note separately by calling displaySavedNote()
+        displaySavedNote();
+
+
+        document.querySelector("button").addEventListener("click", main)
+
+
+
+    </script>
+</body>
+
+</html>
