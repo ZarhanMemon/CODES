@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 1000px;
+        }
+
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+        .result-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .house {
+            width: 500px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .red {
+            background-color: #ff4d4d;
+            color: white;
+        }
+
+        .blue {
+            background-color: #4d94ff;
+            color: white;
+        }
+
+        .green {
+            background-color: #66cc66;
+            color: white;
+        }
+
+        .yellow {
+            background-color: #ffcc00;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welcome to House Selection</h1>
+
+        <button id="startBtn" onclick='main()'>Enter Name</button>
+
+        <div id="result" class="result-container">
+
+        </div>
+    </div>
+
+    <script>
+
+
+// The Magical Sorting Hat: Imagine you are creating a magical sorting hat for a wizard school. Implement a JavaScript function that takes an array of student names and assigns them to one of the four houses (Gryffindor (length less than 6), Hufflepuff(length less than 8), Ravenclaw(length less than 12), or Slytherin(length greater than or equal to 12)) based on the length of their names.
+
+
+let [Red, Blue, Green, Yellow] = [[], [], [], []];
+
+function house_selection(student_name) {
+
+    let houseMessage = '';
+
+
+
+    if (student_name.length < 6) {
+        houseMessage = `${student_name} is in Red`;
+        Red.push(student_name);
+    }
+    else if (student_name.length < 8) {
+        houseMessage = `${student_name} is in Blue`;
+        Blue.push(student_name);
+    }
+    else if (student_name.length < 12) {
+        houseMessage = `${student_name} is in Green`;
+        Green.push(student_name);
+    }
+    else {
+        houseMessage = `${student_name} is in Yellow`;
+        Yellow.push(student_name);
+    }
+
+    displayResult(houseMessage, Red, Blue, Green, Yellow);
+
+}
+
+function displayResult(houseMessage, Red, Blue, Green, Yellow) {
+    const resultContainer = document.getElementById('result');
+    resultContainer.innerHTML = `<h3>${houseMessage}</h3>`;
+ 
+    resultContainer.innerHTML += `<div class="house red">Red House: ${Red.join(', ')}</div>`;
+    resultContainer.innerHTML += `<div class="house blue">Blue House: ${Blue.join(', ')}</div>`;
+    resultContainer.innerHTML += `<div class="house green">Green House: ${Green.join(', ')}</div>`;
+    resultContainer.innerHTML += `<div class="house yellow">Yellow House: ${Yellow.join(', ')}</div>`;
+}
+
+function main() {
+    let student_name = prompt("Enter name:");
+    if (student_name) {
+        house_selection(student_name);
+    }
+}
+
+    </script>
+
+
+
+</body>
+
+</html>
