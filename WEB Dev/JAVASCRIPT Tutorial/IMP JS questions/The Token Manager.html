@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+ // the Token Manager: You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time.
+
+
+        function setAuthToken() {
+
+            let rand_time = Math.floor(Math.random() * (15000 - 5000 + 1)) + 5000;
+
+            let promptInt = prompt("Enter your token:");
+
+            localStorage.setItem("token", promptInt)
+            document.write(`Your token will be expired in ${rand_time / 1000} seconds.`)
+
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    localStorage.removeItem("token")
+                    resolve(`Your token : ${promptInt} is expired `);
+                }, rand_time)
+            })
+        }
+
+        setAuthToken()
+            .then((message) => {
+                document.write(message)
+                console.log(message);
+            })
+
+    </script>
+</body>
+
+</html>
