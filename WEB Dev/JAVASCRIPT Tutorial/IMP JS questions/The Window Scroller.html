@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            height: 2000px;
+        }
+
+        #scrollToTopBtn {
+            position: sticky;
+            top: 10%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            cursor: pointer;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat esse porro suscipit maxime harum quia temporibus, consequuntur saepe nulla, deleniti corrupti sint qui aperiam alias. Quidem perferendis deleniti aperiam atque dolore? Deleniti eaque porro unde nobis laudantium tempora omnis voluptatem aliquam cupiditate veniam. Recusandae rerum molestiae hic sunt neque reprehenderit earum? Facere aut quis ex natus dolorem inventore cumque porro eveniet ipsa expedita corporis debitis doloribus similique quisquam nesciunt voluptates reprehenderit odit, maiores dicta! Atque quam cum, sapiente et, rem eaque dolorem deserunt eveniet temporibus quae dolor sint ex molestias odio deleniti repellat eum magni repudiandae cupiditate quia tempora, numquam iure. Maxime quod fugiat ipsam, rem possimus perferendis sapiente necessitatibus tempore iusto vero ex doloremque est in maiores dolorem? Ex, quam perferendis ea libero saepe assumenda quasi vel recusandae voluptatum iure provident rerum esse dolorem velit vitae porro quibusdam a qui? Earum quo mollitia error sequi tempora corporis ducimus eveniet nemo ea officiis iste neque voluptatibus possimus inventore nisi optio asperiores architecto ex ipsa, iure voluptates. Officia exercitationem eius ipsa recusandae rem repellat ullam voluptatem, dolorem, a rerum ea quod iste tempore nulla. Impedit sint ipsam dolor ad minima, quibusdam eveniet tenetur nihil tempora consectetur voluptatibus incidunt veritatis in, amet culpa? Tenetur velit sapiente sed sint eius perspiciatis tempore eum aliquid, quisquam laudantium molestiae laboriosam officiis ipsum. Adipisci doloremque culpa dolor nam quo laborum ex consequuntur vel voluptatum voluptate autem quod ea veniam molestias, minus rerum dignissimos, enim nesciunt quaerat tempora, totam fuga distinctio dicta! Expedita rem optio excepturi, magnam enim recusandae totam voluptates necessitatibus sed, molestias ex ducimus eveniet quo esse dignissimos atque non, vitae inventore doloremque beatae ipsam assumenda. Quis repudiandae iste quaerat eius eum rerum! Vero eveniet natus error numquam dolores placeat accusamus, reprehenderit quis sit saepe cumque mollitia maiores impedit fugiat ratione iusto provident ducimus necessitatibus!
+</p>
+
+    <button id="scrollToTopBtn" onclick="smoothScrollToTop()">Click here !</button>
+
+    <script>
+
+ // The Window Scroller: You are developing a single - page application with a smooth scrolling effect.Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called.
+
+        function smoothScrollToTop() {
+            window.scrollTo({
+                top:0,
+                behavior: 'smooth'
+            })
+        }
+</script>
+</body>
+
+</html>
