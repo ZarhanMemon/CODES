@@ -1,0 +1,19 @@
+{
+  "name": "spotify_clone",
+  "version": "1.0.0",
+  "description": "this is spotify clone made in npm project --> external node js file provides logic to our main nodejs file like- serer.js dependencies upon slugify and express file/logic ","keywords": [
+    "songs",
+    "music"
+  ],
+  "license": "ISC",
+  "author": "zarhan",
+  "type": "module",
+  "main": "serer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "slugify": "^1.6.6"
+  }
+}
