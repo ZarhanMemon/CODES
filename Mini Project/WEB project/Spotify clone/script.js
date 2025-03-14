@@ -10,7 +10,7 @@ async function main() {
         let PlaylistSongs_href = [];
 
         try {
-            let playlist = await fetch('http://127.0.0.1:3000/All_songs/');
+            let playlist = await fetch('https://spotifyminiplayer.vercel.app/All_songs/');
             let response_playlist = await playlist.text();
 
             let div_playlist = document.createElement('div');
@@ -39,7 +39,7 @@ async function main() {
         try {
             const folderName = playlistUrl.split('/')[4];
 
-            const [songResponse, imageResponse] = await Promise.all([fetch(playlistUrl.trim()), fetch(`http://127.0.0.1:3000/All_songs/${folderName.trim()}/${folderName.trim()}Thumbnail/`)]);
+            const [songResponse, imageResponse] = await Promise.all([fetch(playlistUrl.trim()), fetch(`https://spotifyminiplayer.vercel.app/All_songs/${folderName.trim()}/${folderName.trim()}Thumbnail/`)]);
 
             let response_https = await songResponse.text();
             let response_img = await imageResponse.text();
