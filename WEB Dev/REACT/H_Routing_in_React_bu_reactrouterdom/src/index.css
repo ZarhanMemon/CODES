@@ -1,0 +1,28 @@
+ 
+@import "tailwindcss";
+
+
+ 
+ 
+nav{
+  display: flex;
+  gap: 34px;
+  background-color: black;
+  color: white;
+}
+
+li{
+  list-style: none;
+  padding: 23px;
+}
+
+a li {
+  color: rgb(33, 187, 10);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+ 
