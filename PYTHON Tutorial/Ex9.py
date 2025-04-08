@@ -105,10 +105,10 @@ with open("log.txt") as f:
 #    f1=  f.read().lower()
 #    f2 = f1.find("python")
    while content:
-        content  = f.readline().lower()
-        if 'python' in content :
+        contents  = f.readline().lower()
+        if 'python' in contents :
             print(f"Yes there is python in line {i}")
-            print(content)
+            print(contents)
             i +=1
    
 
