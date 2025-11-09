@@ -1,0 +1,21 @@
+ SELECT * FROM usersInfo;
+ 
+ SELECT Roll_no , Name FROM usersinfo;
+ 
+RENAME TABLE usersinfo TO users;
+ 
+SELECT * FROM users;
+
+RENAME TABLE users TO usersinfo;
+RENAME TABLE usersinfo TO users;
+
+ALTER TABLE users ADD COLUMN Weight DECIMAL(3,2) NOT NULL ;
+ALTER TABLE users DROP COLUMN Password;
+ALTER TABLE users MODIFY COLUMN Name VARCHAR(15);
+
+
+ALTER TABLE users MODIFY COLUMN Name VARCHAR(100) FIRST;
+ALTER TABLE users MODIFY COLUMN Age INT AFTER Weight;
+
+SELECT * FROM users;
+ 
