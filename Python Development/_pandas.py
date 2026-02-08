@@ -252,3 +252,98 @@ else:
 
 #====================================================================
 
+# FLITERING  =  keeping the rows thast match a condition
+
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+tall_pok = df[ df["Height"] >= 2.0 ]
+
+heavy_pok = df[ df["Weight"] >= 100.0]
+
+no_legend = df[ df["Legendary"] == 0 ]
+
+yes_legend = df[ df["Legendary"] == 1]
+
+water_pok = df[ (df["Type1"] == "Water") | (df["Type2"] == "Water") ]  # we cant use "or" in pandas for multiple condition we have to use | (bitwise or) and for and we have to use & (bitwise and)
+
+fire_fly_pok = df[ (df["Type1"] == "Fire") & (df["Type2"] == "Flying") ]
+
+print(tall_pok , "\n\n" , 
+      heavy_pok , "\n\n" , 
+      no_legend , "\n\n" , 
+      yes_legend , "\n\n" , 
+      water_pok , "\n\n" , 
+      fire_fly_pok)
+
+
+# =========================================================
+
+
+# AGGREGRATION func  =  Reduce a set of values intto a single summary value
+#                       Used to summarize and analyse data
+#                       Often used with the groupby() function
+
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+
+
+#------------------------------------
+# WHOLE DATAFRAME :
+
+print(   # df.mean()                 # ERROR -> only apply on Num type columns 
+         df.mean( numeric_only=True ),     #     No : 50.500  , Height : 1.104 , Weight: 38.404 ,Legendary: 0.000
+
+        df.sum( numeric_only=True ) ,  
+
+        df.max( numeric_only=True ) ,  
+                   
+        df.min( numeric_only=True ) ,    
+
+        df.count()                      #-> applies on any type column -> gives the count of non-null value in that column
+)
+
+#------------------------------
+
+# SINGLE Column :
+
+print(   
+        df["Height"].mean(),     # already int or float type -> no use numeric_only=true
+
+        df["Height"].sum( numeric_only=True ) ,  
+
+        df["Height"].max( numeric_only=True ) ,  
+                   
+        df["Height"].min( numeric_only=True ) ,    
+
+        df["Weight"].count(),                      #-> applies on any type column -> gives the count of non-null value in that column
+        df["Type1"].count(),
+        df["Type2"].count()
+)
+#------------------------------
+
+# GroupBy :-  split the data into groups based on some criteria and then apply a function to each group independently
+
+group = df.groupby("Type1") 
+
+print( group )     #-> return object
+
+print( group.groups )    # all group : { gruops_name:{ indexes of elm in it }}
+
+print( group["Height"].mean() )  # mean height of each group
+print( group["Height"].sum() )  
+print( group["Height"].min() )   
+print( group["Height"].max() ) 
+print( group["Height"].count() )     
+
+print( group.get_group("Water") )  # gives the entire data of that group (group name = water)
+
+print( group.get_group("Fire") )  # gives the entire data of that group (group name = fire)
+
+ 
+#=============================================================
+
+
+# Data Cleaning  = 
